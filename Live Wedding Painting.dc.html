@@ -63,10 +63,10 @@
   @media (max-width:900px) { .faq-split { grid-template-columns:minmax(0,1fr); } .faq-split h2 { position:static !important; } }
   .faq-more-btn { background:transparent; border:0; padding:0 0 5px; font-family:inherit; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#E0B25C; border-bottom:1px solid rgba(224,178,92,.6); cursor:pointer; }
   .faq-more-btn:hover { color:#F3EDE4; }
-  .sec-lead { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(28px,4vw,72px); align-items:end; }
-  .sec-lead h2 { margin-bottom:0 !important; }
+  .sec-lead { max-width:760px; margin-left:auto; margin-right:auto; text-align:center; }
+  .sec-lead { margin-left:auto !important; margin-right:auto !important; }
+  .sec-lead p { max-width:56ch; margin-left:auto !important; margin-right:auto !important; }
   .sec-lead p:last-child { margin-bottom:0 !important; }
-  @media (max-width:900px) { .sec-lead { grid-template-columns:minmax(0,1fr); gap:22px; align-items:start; } }
 </style>
 </helmet>
 
