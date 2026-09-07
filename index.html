@@ -59,7 +59,34 @@
     #hero > div { grid-column:1 !important; }
     [data-2col] { grid-template-columns:1fr !important; }
     [data-2col] img { margin-top:0 !important; }
+    .about-img { min-height:0 !important; aspect-ratio:4/5; }
   }
+
+  /* shared layout + interaction utilities */
+  .g4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(22px,2.6vw,34px); align-items:start; }
+  @media (max-width:1080px) { .g4 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:640px)  { .g4 { grid-template-columns:minmax(0,1fr); } }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #E0B25C; outline-offset:3px; border-radius:4px; }
+  .piece-card { display:block; text-decoration:none; color:inherit; }
+  .piece-card .piece-cap { transition:color .35s ease; }
+  .piece-card:hover .piece-cap, .piece-card:focus-visible .piece-cap { color:#F3EDE4; }
+  .piece-card .piece-ring { position:absolute; inset:0; border-radius:inherit; border:1px solid transparent; transition:border-color .35s ease; pointer-events:none; }
+  .piece-card:hover .piece-ring, .piece-card:focus-visible .piece-ring { border-color:rgba(224,178,92,.75); }
+  .piece-card img { transition:transform .7s cubic-bezier(.16,1,.3,1); }
+  .piece-card:hover img { transform:scale(1.03); }
+  /* testimonial carousel */
+  .kw-track { display:flex; gap:clamp(16px,1.8vw,24px); overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:6px; scrollbar-width:none; }
+  .kw-track::-webkit-scrollbar { display:none; }
+  .kw-track > figure { flex:0 0 calc((100% - 3 * clamp(16px,1.8vw,24px)) / 4); scroll-snap-align:start; }
+  @media (max-width:1080px) { .kw-track > figure { flex-basis:calc((100% - clamp(16px,1.8vw,24px)) / 2); } }
+  @media (max-width:640px)  { .kw-track > figure { flex-basis:100%; } }
+  .kw-btn { width:44px; height:44px; border-radius:50%; border:1px solid rgba(243,237,228,.28); background:transparent; color:#F3EDE4; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:border-color .3s, background .3s, color .3s; }
+  .kw-btn:hover { border-color:#E0B25C; color:#E0B25C; }
+  .kw-btn[disabled] { opacity:.3; cursor:default; }
+  .kw-dot { width:6px; height:6px; padding:0; border:0; border-radius:100px; background:rgba(243,237,228,.26); cursor:pointer; transition:width .35s cubic-bezier(.16,1,.3,1), background .35s; }
+  .faq-more-btn { background:transparent; border:0; padding:0 0 5px; font-family:inherit; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#E0B25C; border-bottom:1px solid rgba(224,178,92,.6); cursor:pointer; }
+  .faq-more-btn:hover { color:#F3EDE4; }
+  footer a[aria-label]:hover, footer a[aria-label]:focus-visible { color:#E0B25C !important; }
 </style>
 </helmet>
 
@@ -97,57 +124,85 @@
   <section id="reel" style="padding:clamp(80px,10vw,120px) clamp(20px,4vw,60px) clamp(90px,11vw,150px)">
     <div style="max-width:1440px; margin:0 auto">
       <div data-reveal="" style="max-width:760px; margin:0 auto clamp(50px,6vw,84px); text-align:center">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,72px); line-height:1.02; letter-spacing:-.02em; margin:0 0 18px">A Few Pieces From My World</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 18px">A Few Pieces From My World</h2>
         <p style="font-size:15px; line-height:1.85; margin:0 auto 24px; max-width:52ch; color:rgba(243,237,228,.62)">Live weddings. Portraits. Pets. Spiritual art. Abstract work. Personal commissions. Each one begins differently.</p>
         <a href="Gallery.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">View the Gallery</a>
       </div>
     </div>
-    <div style="max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:20px">
+    <div style="max-width:880px; margin:0 auto; display:flex; flex-direction:column; gap:20px">
       <div data-cs-persp="">
-        <div data-cs-card="" data-cs-i="0" style="width:100%; position:relative; aspect-ratio:3/2; border-radius:24px; overflow:hidden; transform-origin:center center; will-change:transform; box-shadow:0 40px 80px -30px rgba(0,0,0,.55); background:oklch(0.42 0.07 150)">
+        <a href="Collections.dc.html#weddings" class="piece-card" data-cs-card="" data-cs-i="0" style="width:100%; position:relative; aspect-ratio:3/2; border-radius:24px; overflow:hidden; transform-origin:center center; will-change:transform; box-shadow:0 40px 80px -30px rgba(0,0,0,.55); background:oklch(0.42 0.07 150)">
           <img src="assets/reveal-kerala-wreath.jpg" alt="Live wedding painting, finished, held up beside a floral wreath" class="hero-img" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 46%; display:block">
-        </div>
+          <span aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(18,14,26,0) 46%,rgba(18,14,26,.82) 100%)"></span>
+          <span style="position:absolute; left:clamp(20px,3vw,34px); right:clamp(20px,3vw,34px); bottom:clamp(18px,2.4vw,28px)">
+            <span style="display:block; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(22px,2.6vw,32px); line-height:1.1; color:#F3EDE4">Live Wedding Painting</span>
+            <span class="piece-cap" style="display:block; margin-top:8px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.66)">Painted at the venue, finished before the celebration ends</span>
+          </span>
+          <span class="piece-ring"></span>
+        </a>
       </div>
       <div data-cs-persp="">
-        <div data-cs-card="" data-cs-i="1" style="width:100%; position:relative; aspect-ratio:3/2; border-radius:24px; overflow:hidden; transform-origin:center center; will-change:transform; box-shadow:0 40px 80px -30px rgba(0,0,0,.55); background:oklch(0.44 0.06 340)">
+        <a href="Collections.dc.html#portraits" class="piece-card" data-cs-card="" data-cs-i="1" style="width:100%; position:relative; aspect-ratio:3/2; border-radius:24px; overflow:hidden; transform-origin:center center; will-change:transform; box-shadow:0 40px 80px -30px rgba(0,0,0,.55); background:oklch(0.44 0.06 340)">
           <img src="assets/portrait-painting-progress.jpg" alt="Portrait study in progress" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:42% 46%; display:block">
-        </div>
+          <span aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(18,14,26,0) 46%,rgba(18,14,26,.82) 100%)"></span>
+          <span style="position:absolute; left:clamp(20px,3vw,34px); right:clamp(20px,3vw,34px); bottom:clamp(18px,2.4vw,28px)">
+            <span style="display:block; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(22px,2.6vw,32px); line-height:1.1; color:#F3EDE4">Portraits</span>
+            <span class="piece-cap" style="display:block; margin-top:8px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.66)">Couples, families and individuals, painted from your photographs</span>
+          </span>
+          <span class="piece-ring"></span>
+        </a>
       </div>
       <div data-cs-persp="">
-        <div data-cs-card="" data-cs-i="2" style="width:100%; position:relative; aspect-ratio:3/2; border-radius:24px; overflow:hidden; transform-origin:center center; will-change:transform; box-shadow:0 40px 80px -30px rgba(0,0,0,.55); background:oklch(0.5 0.13 75)">
+        <a href="Collections.dc.html#spiritual" class="piece-card" data-cs-card="" data-cs-i="2" style="width:100%; position:relative; aspect-ratio:3/2; border-radius:24px; overflow:hidden; transform-origin:center center; will-change:transform; box-shadow:0 40px 80px -30px rgba(0,0,0,.55); background:oklch(0.5 0.13 75)">
           <img src="assets/spiritual-painting-khajrana.jpg" alt="A devotional painting of a temple deity" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 40%; display:block">
-        </div>
+          <span aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(18,14,26,0) 46%,rgba(18,14,26,.82) 100%)"></span>
+          <span style="position:absolute; left:clamp(20px,3vw,34px); right:clamp(20px,3vw,34px); bottom:clamp(18px,2.4vw,28px)">
+            <span style="display:block; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(22px,2.6vw,32px); line-height:1.1; color:#F3EDE4">Religious &amp; Spiritual Art</span>
+            <span class="piece-cap" style="display:block; margin-top:8px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.66)">Devotional pieces for your home, or as a gift</span>
+          </span>
+          <span class="piece-ring"></span>
+        </a>
       </div>
       <div data-cs-persp="">
-        <div data-cs-card="" data-cs-i="3" style="width:100%; position:relative; aspect-ratio:3/2; border-radius:24px; overflow:hidden; transform-origin:center center; will-change:transform; box-shadow:0 40px 80px -30px rgba(0,0,0,.55); background:oklch(0.4 0.08 240)">
+        <a href="Collections.dc.html#custom" class="piece-card" data-cs-card="" data-cs-i="3" style="width:100%; position:relative; aspect-ratio:3/2; border-radius:24px; overflow:hidden; transform-origin:center center; will-change:transform; box-shadow:0 40px 80px -30px rgba(0,0,0,.55); background:oklch(0.4 0.08 240)">
           <img src="assets/artist-painting-riverside.jpg" alt="Shivani painting a custom landscape commission outdoors" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:44% 48%; display:block">
-        </div>
+          <span aria-hidden="true" style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(18,14,26,0) 46%,rgba(18,14,26,.82) 100%)"></span>
+          <span style="position:absolute; left:clamp(20px,3vw,34px); right:clamp(20px,3vw,34px); bottom:clamp(18px,2.4vw,28px)">
+            <span style="display:block; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(22px,2.6vw,32px); line-height:1.1; color:#F3EDE4">Custom Artwork</span>
+            <span class="piece-cap" style="display:block; margin-top:8px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.66)">A home, a place, a memory, an idea you have been holding onto</span>
+          </span>
+          <span class="piece-ring"></span>
+        </a>
       </div>
     </div>
   </section>
   <section style="padding:clamp(90px,11vw,150px) clamp(20px,4vw,60px); background:#1B1526">
     <div style="max-width:1000px; margin:0 auto; text-align:center">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Art That Means Something</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Art That Means Something</h2>
       <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(26px,3.6vw,52px); font-style:italic; font-weight:300; line-height:1.3; margin:0 0 30px">Every painting is crafted to preserve a moment and emotion.</p>
       <p style="font-size:16px; line-height:1.9; margin:0 auto; max-width:62ch; color:rgba(243,237,228,.66)">Sometimes it starts with a wedding. Other times, it could be a photograph of someone you love, your pet, a special place, or simply an idea you have had for some time. Whatever the idea is, I create every painting with the person and story behind it in mind.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px 28px; justify-content:center; align-items:center; margin-top:clamp(34px,4vw,50px)">
+        <a href="Collections.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 36px; border-radius:100px">Explore the Collection</a>
+        <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">Start an Enquiry</a>
+      </div>
     </div>
   </section>
   <section id="paint" data-sticky-list="" style="padding:clamp(80px,10vw,140px) clamp(20px,4vw,60px)">
     <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(40px,5vw,80px); align-items:start">
       <div style="position:sticky; top:14vh">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,78px); letter-spacing:-.02em; line-height:1.02; margin:0 0 28px">What I Create</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); letter-spacing:-.02em; line-height:1.02; margin:0 0 28px">What I Create</h2>
         
         <div style="position:relative; width:100%; aspect-ratio:4/5; background:#1B1526; overflow:hidden">
-          <img data-thumb="" src="assets/paint-live-wedding.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .6s ease">
-          <img data-thumb="" src="assets/bts-4.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 20%; opacity:0; transition:opacity .6s ease">
+          <img data-thumb="" aria-hidden="true" src="assets/paint-live-wedding.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .6s ease">
+          <img data-thumb="" aria-hidden="true" src="assets/bts-4.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 20%; opacity:0; transition:opacity .6s ease">
           <div data-thumb="" style="position:absolute; inset:0; opacity:0; transition:opacity .6s ease; background:repeating-linear-gradient(135deg, rgba(224,178,92,.14) 0 10px, rgba(224,178,92,.05) 10px 20px); display:flex; align-items:center; justify-content:center; text-align:center; padding:20px">
             <span style="font-family:monospace; font-size:11px; letter-spacing:.08em; color:rgba(243,237,228,.55); text-transform:uppercase">Pet portrait<br>Image to supply</span>
           </div>
-          <img data-thumb="" src="assets/spiritual-painting-durga.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 15%; opacity:0; transition:opacity .6s ease">
+          <img data-thumb="" aria-hidden="true" src="assets/spiritual-painting-durga.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 15%; opacity:0; transition:opacity .6s ease">
           <div data-thumb="" style="position:absolute; inset:0; opacity:0; transition:opacity .6s ease; background:repeating-linear-gradient(135deg, rgba(224,178,92,.14) 0 10px, rgba(224,178,92,.05) 10px 20px); display:flex; align-items:center; justify-content:center; text-align:center; padding:20px">
             <span style="font-family:monospace; font-size:11px; letter-spacing:.08em; color:rgba(243,237,228,.55); text-transform:uppercase">Abstract piece<br>Image to supply</span>
           </div>
-          <img data-thumb="" src="assets/gallery-extra-1.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease">
+          <img data-thumb="" aria-hidden="true" src="assets/gallery-extra-1.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease">
         </div>
       </div>
       <div style="display:flex; flex-direction:column">
@@ -197,9 +252,9 @@
     </div>
   </section>
   <section id="about" style="padding:clamp(80px,10vw,140px) clamp(20px,4vw,60px); background:#1B1526">
-    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(40px,5vw,84px); align-items:center">
+    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(40px,5vw,84px); align-items:stretch">
       <div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(40px,5.4vw,80px); line-height:1; letter-spacing:-.02em; margin:0 0 30px">Hello, I'm Shivani</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1; letter-spacing:-.02em; margin:0 0 30px">Hello, I'm Shivani</h2>
         <p style="font-size:20px; font-weight:300; line-height:1.6; margin:0 0 20px; color:rgba(243,237,228,.86); max-width:48ch">I have loved drawing and painting for as long as I can remember.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:56ch">I hold a BFA and MFA in Fine Arts and have been working as an artist for over 10 years. I am currently pursuing advanced atelier training at Samsara Academy of Art, Hyderabad, which is affiliated with the Barcelona Academy of Art, Spain.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:56ch">Over the years, I&#x27;ve created everything from studio paintings and custom portraits to pet portraits, spiritual artworks, abstract paintings and live wedding paintings.</p>
@@ -207,13 +262,13 @@
         <p style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; line-height:2; margin:0 0 26px; color:rgba(224,178,92,.85); max-width:52ch">BFA &amp; MFA in Fine Arts &middot; 10+ Years of Experience &middot; Advanced Atelier Training &middot; Original Hand-Painted Artwork</p>
         <a href="About.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More About Shivani</a>
       </div>
-      <img src="assets/artist-painting-venue-pink.jpg" alt="Shivani painting outdoors at a wedding venue" style="width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 20%">
+      <img src="assets/artist-painting-venue-pink.jpg" alt="Shivani painting outdoors at a wedding venue" class="about-img" style="width:100%; height:100%; min-height:clamp(420px,48vw,680px); object-fit:cover; object-position:50% 20%">
     </div>
   </section>
   <section id="live" style="padding:clamp(80px,10vw,140px) clamp(20px,4vw,60px)">
     <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:clamp(40px,5vw,80px); align-items:center">
       <div data-reveal="">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,78px); line-height:1.02; letter-spacing:-.02em; margin:0 0 30px">Live Painting, Capturing the Moment as It Happens</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 30px">Live Painting, Capturing the Moment as It Happens</h2>
         <p style="font-size:19px; font-weight:300; line-height:1.6; margin:0 0 20px; max-width:46ch; color:rgba(243,237,228,.84)">There is something truly special about watching a blank canvas slowly become part of your celebration.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 10px; max-width:52ch; color:rgba(243,237,228,.6)">For live weddings, I arrive before the main moment, set up at the venue, and begin building the scene. As the celebration unfolds, the people, colours, and little details come to life on the canvas.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 30px; max-width:52ch; color:rgba(243,237,228,.6)">By the end of the celebration, the painting is complete, ready to be revealed and cherished for years to come.</p>
@@ -228,11 +283,11 @@
   </section>
   <section style="padding:clamp(80px,10vw,140px) clamp(20px,4vw,60px)">
     <div style="max-width:1440px; margin:0 auto">
-      <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 clamp(34px,4.4vw,58px);">From an Idea to a Painting</h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:clamp(24px,3vw,40px)">
+      <h2 data-reveal="" style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 clamp(34px,4.4vw,58px);">From an Idea to a Painting</h2>
+      <div class="g4">
         <div data-reveal="" style="border-top:1px solid rgba(224,178,92,.5); padding-top:26px"><div style="font-family:'Cormorant Garamond',serif; font-size:50px; color:#E0B25C; line-height:1; margin-bottom:18px">01</div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 12px">Tell Me What You Have in Mind</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Share your idea, reference photograph or, for a wedding, your date and venue.</p></div>
         <div data-reveal="" style="border-top:1px solid rgba(224,178,92,.5); padding-top:26px"><div style="font-family:'Cormorant Garamond',serif; font-size:50px; color:#E0B25C; line-height:1; margin-bottom:18px">02</div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 12px">We Plan the Piece</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">We decide the subject, size, composition, and the details that matter most to you.</p></div>
-        <div data-reveal="" style="border-top:1px solid rgba(224,178,92,.5); padding-top:26px"><div style="font-family:'Cormorant Garamond',serif; font-size:50px; color:#E0B25C; line-height:1; margin-bottom:18px">03</div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 12px">I Bring It to Life</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Live wedding paintings are created in acrylic at the venue as your celebration unfolds. Other commissions are thoughtfully created in your preferred medium, including oil, acrylic, charcoal, pencil, pastel or mixed media, following the agreed process and timeline.</p></div>
+        <div data-reveal="" style="border-top:1px solid rgba(224,178,92,.5); padding-top:26px"><div style="font-family:'Cormorant Garamond',serif; font-size:50px; color:#E0B25C; line-height:1; margin-bottom:18px">03</div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 12px">I Bring It to Life</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Wedding paintings are created at the venue as the celebration unfolds. Studio commissions are painted in your chosen medium.</p></div>
         <div data-reveal="" style="border-top:1px solid rgba(224,178,92,.5); padding-top:26px"><div style="font-family:'Cormorant Garamond',serif; font-size:50px; color:#E0B25C; line-height:1; margin-bottom:18px">04</div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 12px">Your Painting Is Ready</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A finished, original artwork, created especially for you.</p></div>
       </div>
       <div style="margin-top:clamp(34px,4vw,52px)"><a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">Start a Commission</a></div>
@@ -240,22 +295,26 @@
   </section>
   <section data-reveal="" style="border-top:1px solid rgba(243,237,228,.1); padding:clamp(70px,9vw,120px) clamp(20px,4vw,60px)">
     <div style="max-width:1440px; margin:0 auto">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 clamp(34px,4.4vw,60px)">The Experience Behind the Canvas</h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(24px,3vw,44px)">
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 clamp(34px,4.4vw,60px)">The Experience Behind the Canvas</h2>
+      <div class="g4">
         <div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Fine Art Training</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">BFA and MFA in Fine Arts, with over 10 years of professional painting experience.</p></div>
         <div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Every Artwork Is Personal</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">No two commissions begin with the same story. Every artwork is thoughtfully created around your memories, ideas, and the moments that matter most to you.</p></div>
         <div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Experience With Live Events</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Years of painting at live celebrations have taught me to blend naturally into the flow of the event, creating art in real time, without ever becoming a distraction.</p></div>
         <div><h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Original Artwork</h3><p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Every painting is created entirely by hand as an original work, made exclusively for you.</p></div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; margin-top:clamp(38px,4.4vw,56px)">
+        <a href="Live Wedding Painting.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 36px; border-radius:100px">See the Live Painting Experience</a>
+        <a href="About.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More About Shivani</a>
       </div>
     </div>
   </section>
   <section data-reveal="" style="border-top:1px solid rgba(243,237,228,.1); padding:clamp(70px,9vw,120px) clamp(20px,4vw,60px)">
     <div style="max-width:1440px; margin:0 auto">
       <div style="text-align:center; max-width:640px; margin:0 auto clamp(36px,4.4vw,56px)">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 16px">Kind Words</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 16px">Kind Words</h2>
         <p style="font-size:15px; line-height:1.8; margin:0; color:rgba(243,237,228,.6)">5.0 from 20 reviews on WedMeGood. Here is what couples have to say.</p>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(16px,1.8vw,24px)">
+      <div class="kw-track" data-kw-track tabindex="0" role="group" aria-label="Client testimonials, scrollable">
         <figure style="margin:0; padding:clamp(24px,2.6vw,34px); border-radius:20px; border:1px solid rgba(243,237,228,.1); background:#1B1526">
           <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px">
             <div aria-hidden="true" style="width:44px; height:44px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:rgba(224,178,92,.16); color:#E0B25C; font-size:13px; letter-spacing:.06em">DC</div>
@@ -322,6 +381,48 @@
           <div aria-label="5 out of 5 stars" style="color:#E0B25C; font-size:13px; letter-spacing:.16em; margin-bottom:14px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote style="margin:0; font-size:15px; line-height:1.8; color:rgba(243,237,228,.8)">&ldquo;Found her on Instagram, she is very professional and sweet to talk to. Happy with the painting she delivered.&rdquo;</blockquote>
         </figure>
+        <figure style="margin:0; padding:clamp(24px,2.6vw,34px); border-radius:20px; border:1px solid rgba(243,237,228,.1); background:#1B1526">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px">
+            <div aria-hidden="true" style="width:44px; height:44px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:rgba(224,178,92,.16); color:#E0B25C; font-size:13px; letter-spacing:.06em">R</div>
+            <div>
+              <div style="font-size:14px; color:#F3EDE4">Rubina</div>
+              <div style="font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(243,237,228,.45); margin-top:4px">Live wedding painting</div>
+            </div>
+          </div>
+          <div aria-label="5 out of 5 stars" style="color:#E0B25C; font-size:13px; letter-spacing:.16em; margin-bottom:14px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote style="margin:0; font-size:15px; line-height:1.8; color:rgba(243,237,228,.8)">&ldquo;The experience with Shivani was amazing. Her art is beautiful and her conceptualization of live wedding painting is fab!&rdquo;</blockquote>
+        </figure>
+        <figure style="margin:0; padding:clamp(24px,2.6vw,34px); border-radius:20px; border:1px solid rgba(243,237,228,.1); background:#1B1526">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px">
+            <div aria-hidden="true" style="width:44px; height:44px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:rgba(224,178,92,.16); color:#E0B25C; font-size:13px; letter-spacing:.06em">DP</div>
+            <div>
+              <div style="font-size:14px; color:#F3EDE4">Deepak Pingale</div>
+              <div style="font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(243,237,228,.45); margin-top:4px">Custom commission</div>
+            </div>
+          </div>
+          <div aria-label="5 out of 5 stars" style="color:#E0B25C; font-size:13px; letter-spacing:.16em; margin-bottom:14px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote style="margin:0; font-size:15px; line-height:1.8; color:rgba(243,237,228,.8)">&ldquo;Delightful from start to finish. The print quality is exceptional, and the packing and every other detail were high quality.&rdquo;</blockquote>
+        </figure>
+        <figure style="margin:0; padding:clamp(24px,2.6vw,34px); border-radius:20px; border:1px solid rgba(243,237,228,.1); background:#1B1526">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px">
+            <div aria-hidden="true" style="width:44px; height:44px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:rgba(224,178,92,.16); color:#E0B25C; font-size:13px; letter-spacing:.06em">AK</div>
+            <div>
+              <div style="font-size:14px; color:#F3EDE4">Abhinaw Kumar</div>
+              <div style="font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(243,237,228,.45); margin-top:4px">Portrait commission</div>
+            </div>
+          </div>
+          <div aria-label="5 out of 5 stars" style="color:#E0B25C; font-size:13px; letter-spacing:.16em; margin-bottom:14px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote style="margin:0; font-size:15px; line-height:1.8; color:rgba(243,237,228,.8)">&ldquo;It felt very warming. The frames are beautifully made, and the perfection at each and every corner is remarkable.&rdquo;</blockquote>
+        </figure>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:22px; margin-top:clamp(28px,3.2vw,40px)">
+        <button type="button" class="kw-btn" data-kw-prev aria-label="Previous testimonials">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+        </button>
+        <div data-kw-dots style="display:flex; align-items:center; gap:8px"></div>
+        <button type="button" class="kw-btn" data-kw-next aria-label="Next testimonials">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+        </button>
       </div>
       <div style="text-align:center; margin-top:clamp(32px,3.8vw,48px); display:flex; flex-wrap:wrap; gap:14px 32px; justify-content:center">
         <a href="Kind Words.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">Read More Stories</a>
@@ -333,7 +434,7 @@
     <div style="max-width:1440px; margin:0 auto">
       <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:20px 40px; margin-bottom:clamp(30px,3.6vw,48px)">
         <div>
-          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 clamp(34px,4.4vw,60px); margin:0">From My Easel</h2>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0">From My Easel</h2>
         </div>
         <p style="font-size:15px; line-height:1.85; margin:0; max-width:44ch; color:rgba(243,237,228,.62)">Behind-the-scenes moments, works in progress, wedding paintings, studio commissions, and finished artwork.</p>
       </div>
@@ -348,7 +449,7 @@
   </section>
   <section data-reveal="" style="border-top:1px solid rgba(243,237,228,.1); padding:clamp(70px,9vw,120px) clamp(20px,4vw,60px)">
     <div style="max-width:1100px; margin:0 auto">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 clamp(34px,4.4vw,60px)">A Few Common Questions</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 clamp(34px,4.4vw,60px)">A Few Common Questions</h2>
       <div style="display:flex; flex-direction:column">
         <details style="border-top:1px solid rgba(243,237,228,.14); padding:22px 0">
           <summary style="cursor:pointer; list-style:none; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(21px,2.2vw,29px); color:#F3EDE4">What kind of artwork do you create?</summary>
@@ -366,6 +467,8 @@
           <summary style="cursor:pointer; list-style:none; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(21px,2.2vw,29px); color:#F3EDE4">Is the wedding painting completed at the venue?</summary>
           <p style="font-size:15px; line-height:1.9; margin:16px 0 0; max-width:70ch; color:rgba(243,237,228,.64)">Yes. The painting is completed at the wedding venue and does not go through a separate studio-finishing stage afterwards.</p>
         </details>
+      </div>
+      <div id="faq-more" hidden>
         <details style="border-top:1px solid rgba(243,237,228,.14); padding:22px 0">
           <summary style="cursor:pointer; list-style:none; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(21px,2.2vw,29px); color:#F3EDE4">Can you create a painting from a photograph?</summary>
           <p style="font-size:15px; line-height:1.9; margin:16px 0 0; max-width:70ch; color:rgba(243,237,228,.64)">Yes. Many portraits and custom commissions begin with photographs or other visual references.</p>
@@ -375,7 +478,10 @@
           <p style="font-size:15px; line-height:1.9; margin:16px 0 0; max-width:70ch; color:rgba(243,237,228,.64)">Yes. I travel for selected weddings across India and can also discuss destination and international enquiries depending on availability.</p>
         </details>
       </div>
-      <a href="Live Wedding Painting.dc.html" style="display:inline-block; margin-top:clamp(30px,3.6vw,46px); font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">View All FAQs</a>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; margin-top:clamp(30px,3.6vw,46px)">
+        <button type="button" class="faq-more-btn" data-faq-toggle aria-expanded="false" aria-controls="faq-more">View More Questions</button>
+        <a href="Live Wedding Painting.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:rgba(243,237,228,.6); border-bottom:1px solid rgba(243,237,228,.25); padding-bottom:5px">View All FAQs</a>
+      </div>
     </div>
   </section>
   <section id="enquire" style="position:relative; padding:clamp(110px,14vw,190px) clamp(20px,4vw,60px); text-align:center; overflow:hidden">
@@ -480,7 +586,7 @@
         </div>
         <div>
           <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Follow</div>
-          <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Instagram</a><a href="https://www.wedmegood.com/profile/Shivani-Jaiswal-Art-25870766/reviews" target="_blank" rel="noopener" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">WedMeGood</a><a href="https://www.facebook.com/" target="_blank" rel="noopener" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Facebook</a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Pinterest</a>
+          <div style="display:flex; align-items:center; gap:6px; margin-left:-11px"><a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"></circle></svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-2.9h-2.9V8.7c0-.85.24-1.42 1.45-1.42h1.55V4.68A20 20 0 0 0 14.24 4.5c-2.24 0-3.77 1.37-3.77 3.88v2.22H8v2.9h2.47V21z" fill="currentColor"></path></svg></a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.28 17.38c-.08-.73-.15-1.85.03-2.65.17-.72 1.1-4.6 1.1-4.6s-.28-.56-.28-1.39c0-1.3.76-2.28 1.7-2.28.8 0 1.19.6 1.19 1.33 0 .8-.51 2-.78 3.12-.22.93.47 1.69 1.39 1.69 1.67 0 2.95-1.76 2.95-4.3 0-2.25-1.61-3.82-3.92-3.82-2.67 0-4.24 2-4.24 4.07 0 .8.31 1.67.7 2.14.08.1.09.18.07.28l-.26 1.06c-.04.17-.14.21-.31.13-1.17-.55-1.9-2.25-1.9-3.63 0-2.95 2.15-5.67 6.2-5.67 3.25 0 5.78 2.32 5.78 5.42 0 3.23-2.04 5.84-4.87 5.84-.95 0-1.84-.5-2.15-1.08l-.58 2.23c-.21.82-.78 1.84-1.17 2.46A9 9 0 1 0 12 3z" fill="currentColor"></path></svg></a></div>
         </div>
       </div>
 
@@ -536,16 +642,96 @@ class Component extends DCLogic {
     }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('[data-reveal]').forEach((el) => this.io.observe(el));
     this.initQuotes();
+    this.initTestimonials();
+    this.initFaq();
     this.tick();
   }
   componentWillUnmount() {
     if (this.rafId) cancelAnimationFrame(this.rafId);
     if (this.io) this.io.disconnect();
     if (this.quoteTimer) clearInterval(this.quoteTimer);
+    if (this.kwTimer) clearInterval(this.kwTimer);
     document.removeEventListener('scroll', this.onScroll, true);
     window.removeEventListener('scroll', this.onScroll);
     window.removeEventListener('resize', this.onScroll);
     document.removeEventListener('visibilitychange', this.onScroll);
+  }
+  initFaq() {
+    const btn = document.querySelector('[data-faq-toggle]');
+    const more = document.getElementById('faq-more');
+    if (!btn || !more) return;
+    more.hidden = true;
+    btn.addEventListener('click', () => {
+      const open = more.hidden;
+      more.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'Show Fewer Questions' : 'View More Questions';
+    });
+  }
+  initTestimonials() {
+    const track = document.querySelector('[data-kw-track]');
+    const dotsBox = document.querySelector('[data-kw-dots]');
+    if (!track || !dotsBox || !track.children.length) return;
+    const cards = Array.from(track.children);
+    const prev = document.querySelector('[data-kw-prev]');
+    const next = document.querySelector('[data-kw-next]');
+    // pages are whole track-widths, so the visible count follows the CSS
+    // breakpoints instead of being hard-coded here
+    const pageCount = () => {
+      const w = cards[0].getBoundingClientRect().width;
+      const per = Math.max(1, Math.round(track.clientWidth / (w || track.clientWidth)));
+      return Math.max(1, Math.ceil(cards.length / per));
+    };
+    const maxScroll = () => track.scrollWidth - track.clientWidth;
+    // the last page is short (the track clamps), so it never lands on a whole
+    // multiple of the width — treat "scrolled to the end" as the final page
+    const current = () => {
+      const n = pageCount();
+      if (track.scrollLeft >= maxScroll() - 2) return n - 1;
+      return Math.min(n - 1, Math.round(track.scrollLeft / Math.max(1, track.clientWidth)));
+    };
+    const paint = (override) => {
+      const n = pageCount();
+      const i = Math.min(typeof override === 'number' ? override : current(), n - 1);
+      if (dotsBox.children.length !== n) {
+        dotsBox.textContent = '';
+        for (let k = 0; k < n; k++) {
+          const d = document.createElement('button');
+          d.type = 'button';
+          d.className = 'kw-dot';
+          d.setAttribute('aria-label', 'Go to testimonial group ' + (k + 1) + ' of ' + n);
+          d.addEventListener('click', () => { go(k); this.startKw(); });
+          dotsBox.appendChild(d);
+        }
+      }
+      Array.from(dotsBox.children).forEach((d, k) => {
+        d.style.width = k === i ? '34px' : '6px';
+        d.style.background = k === i ? '#E0B25C' : 'rgba(243,237,228,.26)';
+        d.setAttribute('aria-current', k === i ? 'true' : 'false');
+      });
+    };
+    const go = (k) => {
+      const n = pageCount();
+      const target = (k + n) % n;
+      track.scrollTo({ left: Math.min(target * track.clientWidth, maxScroll()), behavior: this.reducedMotion ? 'auto' : 'smooth' });
+      // paint from the target rather than waiting for the scroll to settle
+      paint(target);
+    };
+    this.kwNext = () => go(current() + 1);
+    if (prev) prev.addEventListener('click', () => { go(current() - 1); this.startKw(); });
+    if (next) next.addEventListener('click', () => { this.kwNext(); this.startKw(); });
+    track.addEventListener('scroll', () => paint(), { passive: true });
+    window.addEventListener('resize', paint);
+    // hold still while someone is actually reading
+    ['mouseenter', 'focusin', 'touchstart'].forEach((e) => track.addEventListener(e, () => clearInterval(this.kwTimer)));
+    ['mouseleave', 'focusout'].forEach((e) => track.addEventListener(e, () => this.startKw()));
+    paint();
+    this.startKw();
+  }
+  startKw() {
+    if (this.reducedMotion || !this.kwNext) return;
+    clearInterval(this.kwTimer);
+    this.kwTimer = setInterval(this.kwNext, 5000);
   }
   initQuotes() {
     const stage = document.querySelector('[data-quotes]');

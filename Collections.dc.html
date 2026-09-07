@@ -50,6 +50,11 @@
     #nav-toggle:checked ~ #nav-burger span:nth-child(2) { opacity:0; }
     #nav-toggle:checked ~ #nav-burger span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
   }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #E0B25C; outline-offset:3px; border-radius:4px; }
+  footer a[aria-label]:hover, footer a[aria-label]:focus-visible { color:#E0B25C !important; }
+  .g4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(22px,2.6vw,34px); align-items:start; }
+  @media (max-width:1080px) { .g4 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:640px)  { .g4 { grid-template-columns:minmax(0,1fr); } }
 </style>
 </helmet>
 
@@ -101,7 +106,7 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:center; margin-bottom:clamp(50px,6vw,86px)">
         <div>
           <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Portraits</div>
-          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,76px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Your Story, Painted on Canvas</h2>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Your Story, Painted on Canvas</h2>
           <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">I create hand-painted portraits of couples, families, parents, grandparents, and individuals.</p>
           <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">Most portraits begin with a photograph. Before I start, we can discuss the size, background, colours, and any details you would like to include.</p>
           <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:52ch">A portrait can celebrate a wedding, anniversary, family memory, or simply turn a favourite photograph into something you can keep for years.</p>
@@ -109,7 +114,7 @@
         <img src="assets/charcoal-portrait-study.jpg" alt="Charcoal portrait study" style="width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:6px">
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(24px,3vw,44px) clamp(24px,3vw,40px)">
+      <div class="g4">
         <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Couple Portraits</h3>
           <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A special photograph or memory turned into a personal painting for weddings, anniversaries, engagements, or gifts.</p>
@@ -117,10 +122,6 @@
         <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Family Portraits</h3>
           <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A hand-painted portrait of your family created from one photograph or a few different references.</p>
-        </div>
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Parents and Grandparents</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A meaningful way to turn a favourite family photograph into artwork that can stay with you for years.</p>
         </div>
         <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Wedding Portraits</h3>
@@ -163,7 +164,7 @@
     <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:start">
       <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Pet Portraits</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,76px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Your Pet, Painted With Love</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Your Pet, Painted With Love</h2>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">Pets are such an important part of our lives, and a painting can be a beautiful way to celebrate them.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">I create hand painted pet portraits from your photographs and focus on the small details and expressions that make your pet special.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 34px; color:rgba(243,237,228,.62); max-width:52ch">It can be a portrait of a pet who is still with you, a much loved pet you have lost, or a thoughtful gift for someone special.</p>
@@ -201,7 +202,7 @@
       <img src="assets/shivani-spiritual-painting.jpg" alt="Spiritual painting in progress" style="width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:6px">
       <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Religious and Spiritual Art</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,76px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Inspired by Faith and Tradition</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Inspired by Faith and Tradition</h2>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">I create spiritual and religious paintings inspired by faith, devotion, tradition, and sacred stories.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">These paintings can be created for your home, prayer room, living space, wedding gift, housewarming, or another special occasion.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.62); max-width:52ch">We can choose the size, colours, subject, and overall style based on where the painting will be placed.</p>
@@ -225,7 +226,7 @@
     <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:center">
       <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Abstract Art</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,76px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Inspired by Colour and Feeling</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Inspired by Colour and Feeling</h2>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(22px,2.6vw,30px); font-weight:300; line-height:1.45; margin:0 0 24px; max-width:34ch">Not every painting needs to tell a clear story.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">My abstract paintings are created using colour, texture, movement, and feeling.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">Some pieces begin with a mood or colour palette. Others are created especially for a particular room or space.</p>
@@ -245,7 +246,7 @@
     <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:start">
       <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Fabric Painting</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,76px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Made for Fabric</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Made for Fabric</h2>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">I also create hand-painted artwork on denim, clothing, bags, and other fabric pieces.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">You can share a photograph, idea, colour palette, or reference you like, and I can create something around it.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.62); max-width:52ch">It could be something personal for you, a gift for someone special, or simply a way to make an everyday piece feel more unique.</p>
@@ -269,7 +270,7 @@
     <div style="max-width:1440px; margin:0 auto">
       <div style="max-width:800px; margin-bottom:clamp(46px,6vw,80px)">
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Custom Artwork</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,76px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Have Something Else in Mind?</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Have Something Else in Mind?</h2>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">Sometimes an idea does not fit into one category.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">It could be a home you grew up in, a place you love, a favourite photograph, a memory, or something completely personal.</p>
         <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:52ch">Tell me what you would like painted and why it matters to you. We can create something around your story.</p>
@@ -341,7 +342,7 @@
     <div style="position:relative; max-width:1440px; margin:0 auto">
       <div style="max-width:600px">
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Live Wedding Painting</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.4vw,84px); line-height:1; letter-spacing:-.02em; margin:0 0 28px">Your Wedding, Painted Live</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1; letter-spacing:-.02em; margin:0 0 28px">Your Wedding, Painted Live</h2>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.78)">I paint your wedding as it happens, capturing the people, colours, and little details that make the day special.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.68)">I arrive before the main celebration, set up my painting space, and begin creating the scene on canvas. As the wedding unfolds, the painting comes to life.</p>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.4vw,28px); line-height:1.5; margin:0 0 32px">By the end of the celebration, your painting is complete and ready for the final reveal.</p>
@@ -352,7 +353,7 @@
 
   <section style="border-top:1px solid rgba(243,237,228,.1); padding:clamp(80px,10vw,140px) clamp(20px,4vw,60px)">
     <div style="max-width:900px; margin:0 auto; text-align:center">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(36px,5vw,68px); line-height:1.04; margin:0 0 24px">Have Something in Mind?</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; margin:0 0 24px">Have Something in Mind?</h2>
       <p style="font-size:16px; line-height:1.9; margin:0 auto 38px; max-width:54ch; color:rgba(243,237,228,.66)">You do not need to know exactly which category your idea fits into. Tell me what you would like painted, share any photographs or references you have, and we can take it from there.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center">
         <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Get in Touch</a>
@@ -451,7 +452,7 @@
         </div>
         <div>
           <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Follow</div>
-          <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Instagram</a><a href="https://www.wedmegood.com/profile/Shivani-Jaiswal-Art-25870766/reviews" target="_blank" rel="noopener" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">WedMeGood</a><a href="https://www.facebook.com/" target="_blank" rel="noopener" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Facebook</a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Pinterest</a>
+          <div style="display:flex; align-items:center; gap:6px; margin-left:-11px"><a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"></circle></svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-2.9h-2.9V8.7c0-.85.24-1.42 1.45-1.42h1.55V4.68A20 20 0 0 0 14.24 4.5c-2.24 0-3.77 1.37-3.77 3.88v2.22H8v2.9h2.47V21z" fill="currentColor"></path></svg></a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.28 17.38c-.08-.73-.15-1.85.03-2.65.17-.72 1.1-4.6 1.1-4.6s-.28-.56-.28-1.39c0-1.3.76-2.28 1.7-2.28.8 0 1.19.6 1.19 1.33 0 .8-.51 2-.78 3.12-.22.93.47 1.69 1.39 1.69 1.67 0 2.95-1.76 2.95-4.3 0-2.25-1.61-3.82-3.92-3.82-2.67 0-4.24 2-4.24 4.07 0 .8.31 1.67.7 2.14.08.1.09.18.07.28l-.26 1.06c-.04.17-.14.21-.31.13-1.17-.55-1.9-2.25-1.9-3.63 0-2.95 2.15-5.67 6.2-5.67 3.25 0 5.78 2.32 5.78 5.42 0 3.23-2.04 5.84-4.87 5.84-.95 0-1.84-.5-2.15-1.08l-.58 2.23c-.21.82-.78 1.84-1.17 2.46A9 9 0 1 0 12 3z" fill="currentColor"></path></svg></a></div>
         </div>
       </div>
 
