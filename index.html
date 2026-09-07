@@ -59,7 +59,7 @@
     #hero > div { grid-column:1 !important; }
     [data-2col] { grid-template-columns:1fr !important; }
     [data-2col] img { margin-top:0 !important; }
-    .about-img { min-height:0 !important; aspect-ratio:4/5; }
+    .about-media { min-height:0 !important; aspect-ratio:4/5; }
   }
 
   /* shared layout + interaction utilities */
@@ -67,6 +67,7 @@
   @media (max-width:1080px) { .g4 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media (max-width:640px)  { .g4 { grid-template-columns:minmax(0,1fr); } }
   a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #E0B25C; outline-offset:3px; border-radius:4px; }
+  .about-media { position:relative; overflow:hidden; min-height:clamp(360px,40vw,560px); }
   .piece-card { display:block; text-decoration:none; color:inherit; }
   .piece-card .piece-cap { transition:color .35s ease; }
   .piece-card:hover .piece-cap, .piece-card:focus-visible .piece-cap { color:#F3EDE4; }
@@ -262,7 +263,9 @@
         <p style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; line-height:2; margin:0 0 26px; color:rgba(224,178,92,.85); max-width:52ch">BFA &amp; MFA in Fine Arts &middot; 10+ Years of Experience &middot; Advanced Atelier Training &middot; Original Hand-Painted Artwork</p>
         <a href="About.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More About Shivani</a>
       </div>
-      <img src="assets/artist-painting-venue-pink.jpg" alt="Shivani painting outdoors at a wedding venue" class="about-img" style="width:100%; height:100%; min-height:clamp(420px,48vw,680px); object-fit:cover; object-position:50% 20%">
+      <div class="about-media">
+        <img src="assets/artist-painting-venue-pink.jpg" alt="Shivani painting outdoors at a wedding venue" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 60%">
+      </div>
     </div>
   </section>
   <section id="live" style="padding:clamp(80px,10vw,140px) clamp(20px,4vw,60px)">
