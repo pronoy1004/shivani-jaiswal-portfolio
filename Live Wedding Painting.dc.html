@@ -59,6 +59,8 @@
   .g4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(22px,2.6vw,34px); align-items:start; }
   @media (max-width:1080px) { .g4 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media (max-width:640px)  { .g4 { grid-template-columns:minmax(0,1fr); } }
+  .faq-split { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+  @media (max-width:900px) { .faq-split { grid-template-columns:minmax(0,1fr); } .faq-split h2 { position:static !important; } }
   .faq-more-btn { background:transparent; border:0; padding:0 0 5px; font-family:inherit; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#E0B25C; border-bottom:1px solid rgba(224,178,92,.6); cursor:pointer; }
   .faq-more-btn:hover { color:#F3EDE4; }
 </style>
@@ -371,14 +373,13 @@
   </section>
 
   <section data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); background:#1B1526">
-    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(36px,4.5vw,80px); align-items:start">
+    <div class="faq-split" style="max-width:1440px; margin:0 auto; display:grid; gap:clamp(36px,4.5vw,80px); align-items:start">
       <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0; position:sticky; top:14vh">Common Questions</h2>
-      <div style="grid-column:span 1">
+      <div>
         <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">How far in advance should we book?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">It is best to enquire as soon as your wedding date is confirmed. Six to twelve months in advance is usually comfortable, especially during the busy wedding season from October to February. I take a limited number of weddings, so popular dates can fill early.</p></details>
         <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Our wedding is only a few weeks away. Is it too late?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Not always. If the date is available and travel can be arranged, I may still be able to paint your wedding. It is always worth asking.</p></details>
         <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">How long does a live wedding painting take?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">I usually paint for around six to eight hours at the venue. I arrive before the main moment so I can begin the background in advance.</p></details>
         <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Is the painting completed at the wedding?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. The painting is completed during the wedding and is ready for the final reveal before the event ends.</p></details>
-      </div>
       <div id="faq-more" hidden>
         <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">What happens if the wedding runs late?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">That is completely fine. Wedding timings often change. I plan around the actual celebration, not only the printed schedule.</p></details>
         <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Will you disturb the photographer or videographer?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">No. I choose my painting spot carefully and can coordinate with your planner and photography team beforehand.</p></details>
@@ -395,6 +396,7 @@
         <details style="border-top:1px solid rgba(243,237,228,.14); border-bottom:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do you work with wedding planners?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. I am happy to coordinate with your wedding planner before the event so the setup and timing are smooth.</p></details>
       </div>
       <button type="button" class="faq-more-btn" data-faq-toggle aria-expanded="false" aria-controls="faq-more" style="margin-top:clamp(28px,3.4vw,42px)">View More Questions</button>
+      </div>
     </div>
   </section>
 

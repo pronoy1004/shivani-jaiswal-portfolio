@@ -52,6 +52,11 @@
   }
   a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #E0B25C; outline-offset:3px; border-radius:4px; }
   footer a[aria-label]:hover, footer a[aria-label]:focus-visible { color:#E0B25C !important; }
+  .cat-split { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:clamp(36px,5vw,80px); align-items:center; }
+  @media (max-width:900px) { .cat-split { grid-template-columns:minmax(0,1fr); } }
+  .cat-media { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:6px; display:block; }
+  .cat-tile { width:100%; aspect-ratio:4/5; border:1px solid rgba(243,237,228,.16); background:#120E1A; display:grid; place-items:center; text-align:center; padding:26px; border-radius:6px; }
+  .cat-faq { max-width:900px; margin-top:clamp(46px,5.5vw,80px); padding-top:clamp(34px,4vw,52px); border-top:1px solid rgba(243,237,228,.1); }
   .g4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(22px,2.6vw,34px); align-items:start; }
   @media (max-width:1080px) { .g4 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media (max-width:640px)  { .g4 { grid-template-columns:minmax(0,1fr); } }
@@ -103,7 +108,7 @@
 
   <section id="portraits" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); border-top:1px solid rgba(243,237,228,.1)">
     <div style="max-width:1440px; margin:0 auto">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:center; margin-bottom:clamp(50px,6vw,86px)">
+      <div class="cat-split" style="margin-bottom:clamp(50px,6vw,86px)">
         <div>
           <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Portraits</div>
           <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Your Story, Painted on Canvas</h2>
@@ -111,7 +116,7 @@
           <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">Most portraits begin with a photograph. Before I start, we can discuss the size, background, colours, and any details you would like to include.</p>
           <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:52ch">A portrait can celebrate a wedding, anniversary, family memory, or simply turn a favourite photograph into something you can keep for years.</p>
         </div>
-        <img src="assets/charcoal-portrait-study.jpg" alt="Charcoal portrait study" style="width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:6px">
+        <img src="assets/charcoal-portrait-study.jpg" alt="Charcoal portrait study" class="cat-media">
       </div>
 
       <div class="g4">
@@ -133,15 +138,8 @@
         </div>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(34px,5vw,80px); margin-top:clamp(56px,7vw,100px); padding-top:clamp(40px,5vw,64px); border-top:1px solid rgba(243,237,228,.1)">
-        <div>
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(26px,3.2vw,40px); margin:0 0 20px">Choosing Your Photographs</h3>
-          <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:48ch">Clear photographs help me capture more detail. Natural light works best, especially when the face is clearly visible.</p>
-          <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:48ch">If you have a few photographs, send them all and I can help you choose the best one.</p>
-          <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.66); max-width:48ch">Old or unclear photographs can also be shared. I will let you know what is possible before I begin.</p>
-        </div>
-        <div>
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(26px,3.2vw,40px); margin:0 0 20px">Common Questions/FAQ&rsquo;s</h3>
+      <div class="cat-faq">
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(24px,2.8vw,34px); margin:0 0 10px">Common Questions</h3>
           <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
             <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can you paint from an old photograph?</summary>
             <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes, in many cases. Send me the photograph and I can let you know what can be created from it.</p>
@@ -154,14 +152,14 @@
             <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can the background or clothing be changed?</summary>
             <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can discuss these details before I start painting.</p>
           </details>
-          <a href="Enquire.dc.html" style="display:inline-block; margin-top:28px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About a Portrait</a>
-        </div>
+        <a href="Enquire.dc.html" style="display:inline-block; margin-top:28px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About a Portrait</a>
       </div>
     </div>
   </section>
 
   <section id="pets" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); background:#1B1526">
-    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:start">
+    <div style="max-width:1440px; margin:0 auto">
+      <div class="cat-split">
       <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Pet Portraits</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Your Pet, Painted With Love</h2>
@@ -172,13 +170,14 @@
         <p style="font-size:15px; line-height:1.9; margin:0 0 12px; color:rgba(243,237,228,.66); max-width:50ch">Photos taken in natural light and at your pet's eye level work best. Clear photographs of the face and eyes help me capture more of their personality.</p>
         <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.66); max-width:50ch">If you only have old or blurry photographs, send them anyway. I will let you know what can be created from them.</p>
       </div>
-      <div>
-        <div style="width:100%; aspect-ratio:4/5; border:1px solid rgba(243,237,228,.16); background:#120E1A; display:grid; place-items:center; text-align:center; padding:26px; border-radius:6px; margin-bottom:clamp(28px,3.4vw,44px)">
-          <div>
-            <div style="font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
-            <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">A pet portrait</div>
-          </div>
+      <div class="cat-tile">
+        <div>
+          <div style="font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">A pet portrait</div>
         </div>
+      </div>
+      </div>
+      <div class="cat-faq">
         <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(24px,2.8vw,34px); margin:0 0 10px">Common Questions</h3>
         <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
           <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can you paint more than one pet together?</summary>
@@ -198,8 +197,7 @@
   </section>
 
   <section id="spiritual" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px)">
-    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:center">
-      <img src="assets/shivani-spiritual-painting.jpg" alt="Spiritual painting in progress" style="width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:6px">
+    <div class="cat-split" style="max-width:1440px; margin:0 auto">
       <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Religious and Spiritual Art</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Inspired by Faith and Tradition</h2>
@@ -219,11 +217,12 @@
         <p style="font-size:15px; line-height:1.9; margin:0 0 26px; color:rgba(243,237,228,.62); max-width:52ch">If you have a particular deity, temple, family tradition, or reference in mind, share it with me and we can create something around it.</p>
         <a href="Enquire.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About Spiritual Art</a>
       </div>
+      <img src="assets/shivani-spiritual-painting.jpg" alt="Spiritual painting in progress" class="cat-media">
     </div>
   </section>
 
   <section id="abstract" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); background:#1B1526">
-    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:center">
+    <div class="cat-split" style="max-width:1440px; margin:0 auto">
       <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Abstract Art</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Inspired by Colour and Feeling</h2>
@@ -233,7 +232,7 @@
         <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.62); max-width:52ch">If you are looking for original artwork for your home, office, or another space, we can discuss the size, colours, and feeling you would like the painting to have.</p>
         <a href="Gallery.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Explore Abstract Art</a>
       </div>
-      <div style="width:100%; aspect-ratio:1/1; border:1px solid rgba(243,237,228,.16); background:#120E1A; display:grid; place-items:center; text-align:center; padding:26px; border-radius:6px">
+      <div class="cat-tile">
         <div>
           <div style="font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
           <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">An abstract piece</div>
@@ -243,16 +242,13 @@
   </section>
 
   <section id="fabric" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px)">
-    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:start">
+    <div class="cat-split" style="max-width:1440px; margin:0 auto">
       <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Fabric Painting</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Made for Fabric</h2>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">I also create hand-painted artwork on denim, clothing, bags, and other fabric pieces.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">You can share a photograph, idea, colour palette, or reference you like, and I can create something around it.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.62); max-width:52ch">It could be something personal for you, a gift for someone special, or simply a way to make an everyday piece feel more unique.</p>
-        <a href="Enquire.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About Fabric Painting</a>
-      </div>
-      <div>
         <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:rgba(243,237,228,.55); margin-bottom:10px">Fabric painting can include</div>
         <ul style="list-style:none; margin:0 0 26px; padding:0">
           <li style="font-size:15px; line-height:1.9; color:rgba(243,237,228,.7); padding:12px 0; border-bottom:1px solid rgba(243,237,228,.1)">Denim jackets</li>
@@ -261,21 +257,31 @@
           <li style="font-size:15px; line-height:1.9; color:rgba(243,237,228,.7); padding:12px 0; border-bottom:1px solid rgba(243,237,228,.1)">Fabric accessories</li>
           <li style="font-size:15px; line-height:1.9; color:rgba(243,237,228,.7); padding:12px 0; border-bottom:1px solid rgba(243,237,228,.1)">Personalised gifts</li>
         </ul>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.7)">Every piece is painted by hand and created specially for you.</p>
+        <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.7)">Every piece is painted by hand and created specially for you.</p>
+        <a href="Enquire.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About Fabric Painting</a>
+      </div>
+      <div class="cat-tile">
+        <div>
+          <div style="font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">A hand-painted fabric piece</div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="custom" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px)">
     <div style="max-width:1440px; margin:0 auto">
-      <div style="max-width:800px; margin-bottom:clamp(46px,6vw,80px)">
+      <div class="cat-split" style="margin-bottom:clamp(46px,6vw,80px)">
+        <div>
         <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Custom Artwork</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Have Something Else in Mind?</h2>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">Sometimes an idea does not fit into one category.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">It could be a home you grew up in, a place you love, a favourite photograph, a memory, or something completely personal.</p>
         <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:52ch">Tell me what you would like painted and why it matters to you. We can create something around your story.</p>
+        </div>
+        <img src="assets/shivani-with-painting.jpg" alt="Shivani with a finished custom commission" class="cat-media">
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(24px,3vw,44px); margin-bottom:clamp(50px,6vw,86px)">
+      <div class="g4" style="margin-bottom:clamp(50px,6vw,86px)">
         <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">A Home</h3>
           <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Your childhood home, family house, or another place filled with memories.</p>
@@ -293,9 +299,7 @@
           <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Original paintings for birthdays, anniversaries, weddings, retirements, and other special occasions.</p>
         </div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(34px,5vw,80px); align-items:start">
-        <img src="assets/shivani-with-painting.jpg" alt="Shivani with a custom painting" style="width:100%; aspect-ratio:16/11; object-fit:cover; border-radius:6px">
-        <div>
+      <div class="cat-faq">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(24px,2.8vw,34px); margin:0 0 10px">Common Questions</h3>
           <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
             <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">I only have one photograph. Is that enough?</summary>
@@ -310,7 +314,6 @@
             <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(224,178,92,.85)">[CLIENT: Please confirm international shipping details.]</p>
           </details>
           <a href="Enquire.dc.html" style="display:inline-block; margin-top:28px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Discuss a Custom Painting</a>
-        </div>
       </div>
     </div>
   </section>
