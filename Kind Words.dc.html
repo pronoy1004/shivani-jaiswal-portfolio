@@ -54,6 +54,10 @@
   .g4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(22px,2.6vw,34px); align-items:start; }
   @media (max-width:1080px) { .g4 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media (max-width:640px)  { .g4 { grid-template-columns:minmax(0,1fr); } }
+  .sec-lead { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(28px,4vw,72px); align-items:end; }
+  .sec-lead h2 { margin-bottom:0 !important; }
+  .sec-lead p:last-child { margin-bottom:0 !important; }
+  @media (max-width:900px) { .sec-lead { grid-template-columns:minmax(0,1fr); gap:22px; align-items:start; } }
 </style>
 </helmet>
 
@@ -87,10 +91,10 @@
 
   <section id="stories" data-reveal="" style="padding:clamp(60px,7.5vw,110px) clamp(20px,4vw,60px); border-top:1px solid rgba(243,237,228,.1)">
     <div style="max-width:1440px; margin:0 auto">
-      <div style="max-width:660px; margin-bottom:clamp(38px,4.6vw,62px)">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 22px">What Couples Say</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 12px; color:rgba(243,237,228,.7)">Each wedding is different, and every painting holds a different memory.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62)">Here are some of the messages and reviews shared by couples after seeing their finished artwork.</p>
+      <div class="sec-lead" style="margin-bottom:clamp(38px,4.6vw,62px)">
+        <div><h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 22px">What Couples Say</h2></div>
+        <div><p style="font-size:15px; line-height:1.9; margin:0 0 12px; color:rgba(243,237,228,.7)">Each wedding is different, and every painting holds a different memory.</p>
+        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62)">Here are some of the messages and reviews shared by couples after seeing their finished artwork.</p></div>
       </div>
 
       <div class="g4" style="gap:clamp(16px,1.8vw,24px)">
@@ -212,11 +216,11 @@
 
   <section data-reveal="" style="padding:clamp(60px,7.5vw,110px) clamp(20px,4vw,60px); background:#1B1526">
     <div style="max-width:1440px; margin:0 auto">
-      <div style="max-width:660px; margin-bottom:clamp(34px,4.2vw,56px)">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 22px">The Moment They See Their Painting</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 12px; color:rgba(243,237,228,.7)">One of my favourite parts of live wedding painting is the final reveal.</p>
+      <div class="sec-lead" style="margin-bottom:clamp(34px,4.2vw,56px)">
+        <div><h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 22px">The Moment They See Their Painting</h2></div>
+        <div><p style="font-size:15px; line-height:1.9; margin:0 0 12px; color:rgba(243,237,228,.7)">One of my favourite parts of live wedding painting is the final reveal.</p>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.3vw,26px); line-height:1.5; margin:0 0 16px">Sometimes there are smiles. Sometimes there are tears. And sometimes everyone gathers around the painting at once.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62)">These reactions are always special because the couple is seeing their wedding on canvas for the first time.</p>
+        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62)">These reactions are always special because the couple is seeing their wedding on canvas for the first time.</p></div>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(16px,2vw,24px)">
         <div style="width:100%; aspect-ratio:9/16; border:1px solid rgba(243,237,228,.16); background:#120E1A; border-radius:6px; display:grid; place-items:center; text-align:center; padding:20px">
@@ -257,11 +261,11 @@
 
   <section data-reveal="" style="padding:clamp(60px,7.5vw,110px) clamp(20px,4vw,60px); background:#1B1526">
     <div style="max-width:1440px; margin:0 auto">
-      <div style="max-width:660px; margin-bottom:clamp(34px,4.2vw,56px)">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 22px">Where the Paintings Live Now</h2>
-        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.3vw,26px); line-height:1.5; margin:0 0 16px">The wedding may last a day, but the painting stays.</p>
+      <div class="sec-lead" style="margin-bottom:clamp(34px,4.2vw,56px)">
+        <div><h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 22px">Where the Paintings Live Now</h2></div>
+        <div><p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.3vw,26px); line-height:1.5; margin:0 0 16px">The wedding may last a day, but the painting stays.</p>
         <p style="font-size:15px; line-height:1.9; margin:0 0 12px; color:rgba(243,237,228,.66)">I love seeing where the artwork ends up after the celebration, whether it is hanging in a living room, bedroom, hallway, or family home.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62)">Here are a few paintings in the homes they were created for.</p>
+        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62)">Here are a few paintings in the homes they were created for.</p></div>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(20px,2.6vw,34px)">
         <article>
