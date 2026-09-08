@@ -35,14 +35,14 @@
     #nav-burger span:nth-child(1) { top:0; }
     #nav-burger span:nth-child(2) { top:8px; }
     #nav-burger span:nth-child(3) { top:16px; }
-    header nav { position:fixed; top:0; right:0; width:min(78vw,320px); height:100vh; flex-direction:column !important; flex-wrap:nowrap !important; justify-content:center !important; align-items:flex-start !important; gap:26px !important; padding:100px 44px !important; margin:0; background:#171123 !important; border:0 !important; border-radius:0 !important; backdrop-filter:none !important; box-shadow:-30px 0 60px -20px rgba(0,0,0,.5); transform:translateX(100%); transition:transform .45s cubic-bezier(.16,1,.3,1); z-index:60; font-size:14px !important; }
+    header nav { position:fixed; top:0; right:0; width:min(78vw,320px); height:100vh; flex-direction:column !important; flex-wrap:nowrap !important; justify-content:center !important; align-items:flex-start !important; gap:26px !important; padding:100px 44px !important; margin:0; background:#171123 !important; border:0 !important; border-radius:0 !important; backdrop-filter:none !important; box-shadow:-30px 0 60px -20px rgba(0,0,0,.5); transform:translateX(100%); transition:transform .45s cubic-bezier(.16,1,.3,1); z-index:60; font-size:15px !important; }
     header nav a { padding:0 !important; background:transparent !important; }
     header > a[href="Enquire.dc.html"] { display:none !important; }
     #nav-toggle:checked ~ nav { transform:translateX(0); }
     #nav-scrim { display:block; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(10,8,14,.55); opacity:0; pointer-events:none; transition:opacity .35s; z-index:59; }
     #nav-toggle:checked ~ #nav-scrim { opacity:1; pointer-events:auto; }
     .nav-menu { position:static; transform:none !important; opacity:1 !important; visibility:visible !important; min-width:0; padding:6px 0 0; border:0; background:transparent !important; backdrop-filter:none; box-shadow:none; }
-    .nav-menu a { padding:8px 0 !important; font-size:12px; letter-spacing:.14em; color:rgba(243,237,228,.55) !important; }
+    .nav-menu a { padding:8px 0 !important; font-size:14px; letter-spacing:.14em; color:rgba(243,237,228,.55) !important; }
     .nav-caret { display:none; }
     header nav .nav-group { width:100%; }
     #nav-toggle:checked ~ #nav-burger span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
@@ -66,10 +66,10 @@
     </a>
     <input type="checkbox" id="nav-toggle" style="position:absolute; opacity:0; pointer-events:none">
     <label for="nav-toggle" id="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
-    <nav style="display:flex; align-items:center; gap:2px; padding:6px; border-radius:100px; border:1px solid rgba(243,237,228,.12); background:rgba(23,17,35,.62); backdrop-filter:blur(16px); font-size:11px; letter-spacing:.18em; text-transform:uppercase">
+    <nav style="display:flex; align-items:center; gap:2px; padding:6px; border-radius:100px; border:1px solid rgba(243,237,228,.12); background:rgba(23,17,35,.62); backdrop-filter:blur(16px); font-size:13px; letter-spacing:.18em; text-transform:uppercase">
       <span class="nav-group"><a href="Collections.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Collections<svg class="nav-caret" viewBox="0 0 10 6" width="8" height="5" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"></path></svg></a><span class="nav-menu"><a href="Collections.dc.html#portraits">Portraits</a><a href="Collections.dc.html#pets">Pet Portraits</a><a href="Collections.dc.html#spiritual">Spiritual Art</a><a href="Collections.dc.html#abstract">Abstract Art</a><a href="Collections.dc.html#fabric">Fabric Painting</a><a href="Collections.dc.html#custom">Custom Artwork</a><a href="Collections.dc.html#events">Live Event Painting</a><a href="Collections.dc.html#hospitality">Hotels &amp; Hospitality</a><a href="Collections.dc.html#weddings">Live Wedding Painting</a></span></span><a href="Live Wedding Painting.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Live Weddings</a><span class="nav-group"><a href="Gallery.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Gallery<svg class="nav-caret" viewBox="0 0 10 6" width="8" height="5" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"></path></svg></a><span class="nav-menu"><a href="Gallery.dc.html#live-weddings">Live Weddings</a><a href="Gallery.dc.html#portraits">Portraits</a><a href="Gallery.dc.html#pets">Pet Portraits</a><a href="Gallery.dc.html#spiritual">Spiritual Art</a><a href="Gallery.dc.html#custom">Custom Work</a><a href="Gallery.dc.html#behind">Behind the Scenes</a></span></span><a href="About.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">About</a><a href="Kind Words.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Kind Words</a><a href="Blog.dc.html" style="padding:9px 15px; border-radius:100px; color:#F3EDE4; background:rgba(243,237,228,.09); transition:color .3s,background .3s">Journal</a>
     </nav>
-    <a href="Enquire.dc.html" style="flex-shrink:0; font-size:11px; letter-spacing:.2em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:14px 26px; border-radius:100px; box-shadow:0 10px 30px -12px rgba(224,178,92,.8)">Enquire</a>
+    <a href="Enquire.dc.html" style="flex-shrink:0; font-size:13px; letter-spacing:.2em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:14px 26px; border-radius:100px; box-shadow:0 10px 30px -12px rgba(224,178,92,.8)">Enquire</a>
     <label for="nav-toggle" id="nav-scrim" aria-hidden="true"></label>
   </header>
 
@@ -81,34 +81,34 @@
     <div style="max-width:1440px; margin:0 auto">
       <h1 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(48px,8vw,128px); line-height:.94; letter-spacing:-.025em; margin:0 0 32px">The Journal</h1>
       <p style="font-size:20px; font-weight:300; line-height:1.6; margin:0 0 16px; color:rgba(243,237,228,.86); max-width:52ch">Stories from weddings, notes from my painting process, and simple answers to questions people often ask me.</p>
-      <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:56ch">Here you can read more about live wedding painting, portraits, custom artwork, and the moments behind the paintings.</p>
+      <p style="font-size:16px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:56ch">Here you can read more about live wedding painting, portraits, custom artwork, and the moments behind the paintings.</p>
     </div>
     </div>
   </section>
 
   <section data-reveal="" style="padding:0 clamp(20px,4vw,60px) clamp(60px,7.5vw,110px)">
     <div style="max-width:1440px; margin:0 auto; border-top:1px solid rgba(243,237,228,.12); padding-top:clamp(36px,4.4vw,58px)">
-      <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:rgba(243,237,228,.5); margin-bottom:clamp(26px,3.2vw,40px)">Explore the Journal</div>
+      <div style="font-size:13px; letter-spacing:.26em; text-transform:uppercase; color:rgba(243,237,228,.5); margin-bottom:clamp(26px,3.2vw,40px)">Explore the Journal</div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:clamp(24px,3vw,42px)">
         <div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Live Wedding Painting</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">How live wedding painting works, what to expect, and answers to common questions.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">How live wedding painting works, what to expect, and answers to common questions.</p>
         </div>
         <div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">From the Painting Stand</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Stories from real weddings and the paintings created during them.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Stories from real weddings and the paintings created during them.</p>
         </div>
         <div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Wedding Planning</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Simple tips and ideas that can help while planning your wedding.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Simple tips and ideas that can help while planning your wedding.</p>
         </div>
         <div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Portraits and Custom Art</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Stories and tips about portraits, pet portraits, spiritual art, and custom paintings.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Stories and tips about portraits, pet portraits, spiritual art, and custom paintings.</p>
         </div>
         <div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">On Painting</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A closer look at colours, materials, techniques, and the way I create my work.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A closer look at colours, materials, techniques, and the way I create my work.</p>
         </div>
       </div>
     </div>
@@ -123,55 +123,55 @@
           <a href="BlogPost.dc.html" tabindex="-1" aria-hidden="true" style="display:block; overflow:hidden; border-radius:6px; margin-bottom:22px">
             <img src="assets/painting-varmala-sunset.jpg" alt="Sunset varmala painting, the featured story" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block">
           </a>
-          <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">Live Wedding Painting</div>
+          <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">Live Wedding Painting</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(23px,2.2vw,30px); line-height:1.16; margin:0 0 14px">How Much Does a Live Wedding Painter Cost in India?</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Prices vary with canvas size, location and time at the event. Here is what usually affects the cost, and what to ask before you book.</p>
-          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
+          <p style="font-size:16px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Prices vary with canvas size, location and time at the event. Here is what usually affects the cost, and what to ask before you book.</p>
+          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
         </article>
         <article class="blog-card" style="display:flex; flex-direction:column">
           <a href="BlogPost.dc.html" tabindex="-1" aria-hidden="true" style="display:block; overflow:hidden; border-radius:6px; margin-bottom:22px">
             <img src="assets/painting-couple-varmala-real.jpg" alt="A varmala painting beside the couple it was painted for" loading="lazy" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block">
           </a>
-          <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">Wedding Planning</div>
+          <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">Wedding Planning</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(23px,2.2vw,30px); line-height:1.16; margin:0 0 14px">Live Wedding Painting or Wedding Photography?</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Your photographer captures the full day, while a live painting focuses on one moment and turns it into a piece of art. Here is how the two work together.</p>
-          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
+          <p style="font-size:16px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Your photographer captures the full day, while a live painting focuses on one moment and turns it into a piece of art. Here is how the two work together.</p>
+          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
         </article>
         <article class="blog-card" style="display:flex; flex-direction:column">
           <a href="BlogPost.dc.html" tabindex="-1" aria-hidden="true" style="display:block; overflow:hidden; border-radius:6px; margin-bottom:22px">
             <img src="assets/painting-closeup-mandap-raipur.jpg" alt="Close detail of a mandap painting" loading="lazy" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block">
           </a>
-          <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">From the Painting Stand</div>
+          <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">From the Painting Stand</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(23px,2.2vw,30px); line-height:1.16; margin:0 0 14px">Which Wedding Moment Should You Paint?</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Varmala, pheras, vows, sunset or a family moment. Every wedding is different, and these are the things I look for when helping couples choose.</p>
-          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
+          <p style="font-size:16px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Varmala, pheras, vows, sunset or a family moment. Every wedding is different, and these are the things I look for when helping couples choose.</p>
+          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
         </article>
         <article class="blog-card" style="display:flex; flex-direction:column">
           <a href="BlogPost.dc.html" tabindex="-1" aria-hidden="true" style="display:block; overflow:hidden; border-radius:6px; margin-bottom:22px">
             <img src="assets/live-easel-venue.jpg" alt="The canvas on its easel at the venue" loading="lazy" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block">
           </a>
-          <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">Wedding Planning</div>
+          <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">Wedding Planning</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(23px,2.2vw,30px); line-height:1.16; margin:0 0 14px">How Early Should You Book a Live Wedding Painter?</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">It is best to enquire once your date and venue are confirmed. Popular dates book early, especially through the busy season from October to February.</p>
-          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
+          <p style="font-size:16px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">It is best to enquire once your date and venue are confirmed. Popular dates book early, especially through the busy season from October to February.</p>
+          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
         </article>
         <article class="blog-card" style="display:flex; flex-direction:column">
           <a href="BlogPost.dc.html" tabindex="-1" aria-hidden="true" style="display:block; overflow:hidden; border-radius:6px; margin-bottom:22px">
             <img src="assets/bts-1.jpg" alt="A finished painting at the venue" loading="lazy" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block">
           </a>
-          <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">Portraits and Custom Art</div>
+          <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">Portraits and Custom Art</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(23px,2.2vw,30px); line-height:1.16; margin:0 0 14px">Can Your Pet Be in Your Wedding Painting?</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Yes. If your pet is part of your wedding, I can include them in the painting. If they cannot attend, a clear photograph works just as well.</p>
-          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
+          <p style="font-size:16px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Yes. If your pet is part of your wedding, I can include them in the painting. If they cannot attend, a clear photograph works just as well.</p>
+          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
         </article>
         <article class="blog-card" style="display:flex; flex-direction:column">
           <a href="BlogPost.dc.html" tabindex="-1" aria-hidden="true" style="display:block; overflow:hidden; border-radius:6px; margin-bottom:22px">
             <img src="assets/hero-painting-reveal.jpg" alt="A finished wedding painting being revealed" loading="lazy" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block">
           </a>
-          <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">On Painting</div>
+          <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:14px">On Painting</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(23px,2.2vw,30px); line-height:1.16; margin:0 0 14px">What Canvas Size Should You Choose?</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">A smaller canvas focuses mainly on the couple. A larger one leaves room for the venue, mandap, décor and family around them.</p>
-          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
+          <p style="font-size:16px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">A smaller canvas focuses mainly on the couple. A larger one leaves room for the venue, mandap, décor and family around them.</p>
+          <a href="BlogPost.dc.html" style="margin-top:auto; align-self:flex-start; font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.5); padding-bottom:5px">Read the Story</a>
         </article>
       </div>
     </div>
@@ -184,8 +184,8 @@
       <div style="max-width:560px">
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">From My Painting Stand</h2>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.4vw,28px); line-height:1.45; margin:0 0 20px">Some stories deserve more than a caption.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 32px; color:rgba(243,237,228,.72)">This is where I share the moments behind individual paintings, what happened at the wedding, what I noticed, and how the final artwork came together.</p>
-        <a href="BlogPost.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:18px 32px; border-radius:100px">Explore Wedding Stories</a>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 32px; color:rgba(243,237,228,.72)">This is where I share the moments behind individual paintings, what happened at the wedding, what I noticed, and how the final artwork came together.</p>
+        <a href="BlogPost.dc.html" style="display:inline-block; font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:18px 32px; border-radius:100px">Explore Wedding Stories</a>
       </div>
     </div>
   </section>
@@ -194,7 +194,7 @@
     <div style="max-width:900px; margin:0 auto; text-align:center">
       <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; margin:0 0 22px">Looking for Something Specific?</h2>
       <p style="font-size:16px; line-height:1.9; margin:0 auto 34px; max-width:56ch; color:rgba(243,237,228,.66)">Whether you are planning a wedding, thinking about a portrait, or simply curious about how I paint, you can explore the latest stories here.</p>
-      <a href="BlogPost.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.3); color:#F3EDE4; padding:19px 34px; border-radius:100px">View All Articles</a>
+      <a href="BlogPost.dc.html" style="display:inline-block; font-size:13px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.3); color:#F3EDE4; padding:19px 34px; border-radius:100px">View All Articles</a>
     </div>
   </section>
 
@@ -203,8 +203,8 @@
       <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; margin:0 0 24px">Thinking About Your Own Painting?</h2>
       <p style="font-size:16px; line-height:1.9; margin:0 auto 38px; max-width:52ch; color:rgba(243,237,228,.66)">If something you read here gives you an idea for your own artwork, I would love to hear about it.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center">
-        <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Get in Touch</a>
-        <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.3); color:#F3EDE4; padding:19px 34px; border-radius:100px">Check Your Wedding Date</a>
+        <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Get in Touch</a>
+        <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.3); color:#F3EDE4; padding:19px 34px; border-radius:100px">Check Your Wedding Date</a>
       </div>
     </div>
   </section>
@@ -212,10 +212,10 @@
   <section data-video-reel="" data-reveal="" style="border-top:1px solid rgba(243,237,228,.1); padding:clamp(70px,9vw,120px) 0">
     <div style="max-width:1440px; margin:0 auto; padding:0 clamp(20px,4vw,60px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:18px 40px; margin-bottom:clamp(28px,3.4vw,44px)">
       <div>
-        <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:rgba(224,178,92,.9); margin-bottom:14px">Watch</div>
+        <div style="font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:rgba(224,178,92,.9); margin-bottom:14px">Watch</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.4vw,64px); line-height:1.04; letter-spacing:-.02em; margin:0">Brush, canvas, and the moment</h2>
       </div>
-      <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More on Instagram</a>
+      <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More on Instagram</a>
     </div>
     <div style="display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding:6px clamp(20px,4vw,60px) 20px; -webkit-overflow-scrolling:touch">
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
@@ -224,7 +224,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live wedding painting in progress</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live wedding painting in progress</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-portrait.jpg" alt="Portrait commission" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -232,7 +232,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Portrait commission</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Portrait commission</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-spiritual.jpg" alt="Spiritual painting" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -240,7 +240,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Spiritual painting</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Spiritual painting</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-custom-artwork.jpg" alt="Custom artwork" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -248,7 +248,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Custom artwork</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Custom artwork</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-live-wedding-2.jpg" alt="Live painting at a mandap" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -256,7 +256,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live painting at a mandap</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live painting at a mandap</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-custom.jpg" alt="A commission being finished" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -264,7 +264,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">A commission being finished</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">A commission being finished</span>
         </a>
     </div>
   </section>
@@ -273,11 +273,11 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(30px,4vw,56px); align-items:center; padding:clamp(32px,4vw,56px); border-radius:26px; background:linear-gradient(120deg,#241A33 0%,#1B1526 100%); border:1px solid rgba(243,237,228,.1)">
         <div>
           <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,3.4vw,48px); line-height:1.1; letter-spacing:-.02em; margin:0 0 14px">Have a moment you want painted?</h2>
-          <p style="font-size:15px; line-height:1.8; margin:0; color:rgba(243,237,228,.62); max-width:46ch">Tell me the date, the place, and the story. I take a limited number of commissions each month.</p>
+          <p style="font-size:16px; line-height:1.8; margin:0; color:rgba(243,237,228,.62); max-width:46ch">Tell me the date, the place, and the story. I take a limited number of commissions each month.</p>
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:14px; justify-self:start">
-          <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Start an Enquiry</a>
-          <a href="mailto:hello@shivanijaiswalart.com" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.28); color:#F3EDE4; padding:19px 34px; border-radius:100px">Email Shivani</a>
+          <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Start an Enquiry</a>
+          <a href="mailto:hello@shivanijaiswalart.com" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.28); color:#F3EDE4; padding:19px 34px; border-radius:100px">Email Shivani</a>
         </div>
       </div>
 
@@ -287,23 +287,23 @@
             <img src="assets/logo.png" alt="Shivani Jaiswal" style="width:44px; height:44px; border-radius:50%; object-fit:cover">
             <span style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300">Shivani Jaiswal</span>
           </a>
-          <p style="font-size:14px; line-height:1.8; margin:0; color:rgba(243,237,228,.55); max-width:34ch">Fine artist creating original commissioned artwork, and painting live at celebrations across India.</p>
+          <p style="font-size:15px; line-height:1.8; margin:0; color:rgba(243,237,228,.55); max-width:34ch">Fine artist creating original commissioned artwork, and painting live at celebrations across India.</p>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Explore</div>
-          <a href="Collections.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Collections</a><a href="Gallery.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Gallery</a><a href="Live Wedding Painting.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Live Weddings</a><a href="Blog.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Journal</a>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Explore</div>
+          <a href="Collections.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Collections</a><a href="Gallery.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Gallery</a><a href="Live Wedding Painting.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Live Weddings</a><a href="Blog.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Journal</a>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Studio</div>
-          <a href="About.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">About Shivani</a><a href="Kind Words.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Kind Words</a><a href="Enquire.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Enquire</a><a href="Privacy.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Privacy Policy</a>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Studio</div>
+          <a href="About.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">About Shivani</a><a href="Kind Words.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Kind Words</a><a href="Enquire.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Enquire</a><a href="Privacy.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Privacy Policy</a>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Follow</div>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Follow</div>
           <div style="display:flex; align-items:center; gap:6px; margin-left:-11px"><a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"></circle></svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-2.9h-2.9V8.7c0-.85.24-1.42 1.45-1.42h1.55V4.68A20 20 0 0 0 14.24 4.5c-2.24 0-3.77 1.37-3.77 3.88v2.22H8v2.9h2.47V21z" fill="currentColor"></path></svg></a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.28 17.38c-.08-.73-.15-1.85.03-2.65.17-.72 1.1-4.6 1.1-4.6s-.28-.56-.28-1.39c0-1.3.76-2.28 1.7-2.28.8 0 1.19.6 1.19 1.33 0 .8-.51 2-.78 3.12-.22.93.47 1.69 1.39 1.69 1.67 0 2.95-1.76 2.95-4.3 0-2.25-1.61-3.82-3.92-3.82-2.67 0-4.24 2-4.24 4.07 0 .8.31 1.67.7 2.14.08.1.09.18.07.28l-.26 1.06c-.04.17-.14.21-.31.13-1.17-.55-1.9-2.25-1.9-3.63 0-2.95 2.15-5.67 6.2-5.67 3.25 0 5.78 2.32 5.78 5.42 0 3.23-2.04 5.84-4.87 5.84-.95 0-1.84-.5-2.15-1.08l-.58 2.23c-.21.82-.78 1.84-1.17 2.46A9 9 0 1 0 12 3z" fill="currentColor"></path></svg></a></div>
         </div>
       </div>
 
-      <div style="border-top:1px solid rgba(243,237,228,.1); padding:26px 0; display:flex; flex-wrap:wrap; gap:12px 32px; justify-content:space-between; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.42)">
+      <div style="border-top:1px solid rgba(243,237,228,.1); padding:26px 0; display:flex; flex-wrap:wrap; gap:12px 32px; justify-content:space-between; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.42)">
         <div>&copy; 2026 Shivani Jaiswal. All rights reserved.</div>
         <div style="display:flex; flex-wrap:wrap; gap:12px 26px">
           <a href="Privacy.dc.html" style="color:rgba(243,237,228,.42)">Privacy Policy</a>
