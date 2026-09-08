@@ -36,14 +36,14 @@
     #nav-burger span:nth-child(1) { top:0; }
     #nav-burger span:nth-child(2) { top:8px; }
     #nav-burger span:nth-child(3) { top:16px; }
-    header nav { position:fixed; top:0; right:0; width:min(78vw,320px); height:100vh; flex-direction:column !important; flex-wrap:nowrap !important; justify-content:center !important; align-items:flex-start !important; gap:26px !important; padding:100px 44px !important; margin:0; background:#171123 !important; border:0 !important; border-radius:0 !important; backdrop-filter:none !important; box-shadow:-30px 0 60px -20px rgba(0,0,0,.5); transform:translateX(100%); transition:transform .45s cubic-bezier(.16,1,.3,1); z-index:60; font-size:14px !important; }
+    header nav { position:fixed; top:0; right:0; width:min(78vw,320px); height:100vh; flex-direction:column !important; flex-wrap:nowrap !important; justify-content:center !important; align-items:flex-start !important; gap:26px !important; padding:100px 44px !important; margin:0; background:#171123 !important; border:0 !important; border-radius:0 !important; backdrop-filter:none !important; box-shadow:-30px 0 60px -20px rgba(0,0,0,.5); transform:translateX(100%); transition:transform .45s cubic-bezier(.16,1,.3,1); z-index:60; font-size:15px !important; }
     header nav a { padding:0 !important; background:transparent !important; }
     header > a[href="Enquire.dc.html"] { display:none !important; }
     #nav-toggle:checked ~ nav { transform:translateX(0); }
     #nav-scrim { display:block; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(10,8,14,.55); opacity:0; pointer-events:none; transition:opacity .35s; z-index:59; }
     #nav-toggle:checked ~ #nav-scrim { opacity:1; pointer-events:auto; }
     .nav-menu { position:static; transform:none !important; opacity:1 !important; visibility:visible !important; min-width:0; padding:6px 0 0; border:0; background:transparent !important; backdrop-filter:none; box-shadow:none; }
-    .nav-menu a { padding:8px 0 !important; font-size:12px; letter-spacing:.14em; color:rgba(243,237,228,.55) !important; }
+    .nav-menu a { padding:8px 0 !important; font-size:14px; letter-spacing:.14em; color:rgba(243,237,228,.55) !important; }
     .nav-caret { display:none; }
     header nav .nav-group { width:100%; }
     #nav-toggle:checked ~ #nav-burger span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
@@ -61,7 +61,7 @@
   @media (max-width:640px)  { .g4 { grid-template-columns:minmax(0,1fr); } }
   .faq-split { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
   @media (max-width:900px) { .faq-split { grid-template-columns:minmax(0,1fr); } .faq-split h2 { position:static !important; } }
-  .faq-more-btn { background:transparent; border:0; padding:0 0 5px; font-family:inherit; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#E0B25C; border-bottom:1px solid rgba(224,178,92,.6); cursor:pointer; }
+  .faq-more-btn { background:transparent; border:0; padding:0 0 5px; font-family:inherit; font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#E0B25C; border-bottom:1px solid rgba(224,178,92,.6); cursor:pointer; }
   .faq-more-btn:hover { color:#F3EDE4; }
   .sec-lead { max-width:760px; margin-left:auto; margin-right:auto; text-align:center; }
   .sec-lead { margin-left:auto !important; margin-right:auto !important; }
@@ -77,10 +77,10 @@
     </a>
     <input type="checkbox" id="nav-toggle" style="position:absolute; opacity:0; pointer-events:none">
     <label for="nav-toggle" id="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
-    <nav style="display:flex; align-items:center; gap:2px; padding:6px; border-radius:100px; border:1px solid rgba(243,237,228,.12); background:rgba(23,17,35,.62); backdrop-filter:blur(16px); font-size:11px; letter-spacing:.18em; text-transform:uppercase">
+    <nav style="display:flex; align-items:center; gap:2px; padding:6px; border-radius:100px; border:1px solid rgba(243,237,228,.12); background:rgba(23,17,35,.62); backdrop-filter:blur(16px); font-size:13px; letter-spacing:.18em; text-transform:uppercase">
       <span class="nav-group"><a href="Collections.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Collections<svg class="nav-caret" viewBox="0 0 10 6" width="8" height="5" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"></path></svg></a><span class="nav-menu"><a href="Collections.dc.html#portraits">Portraits</a><a href="Collections.dc.html#pets">Pet Portraits</a><a href="Collections.dc.html#spiritual">Spiritual Art</a><a href="Collections.dc.html#abstract">Abstract Art</a><a href="Collections.dc.html#fabric">Fabric Painting</a><a href="Collections.dc.html#custom">Custom Artwork</a><a href="Collections.dc.html#events">Live Event Painting</a><a href="Collections.dc.html#hospitality">Hotels &amp; Hospitality</a><a href="Collections.dc.html#weddings">Live Wedding Painting</a></span></span><a href="Live Wedding Painting.dc.html" style="padding:9px 15px; border-radius:100px; color:#F3EDE4; background:rgba(243,237,228,.09); transition:color .3s,background .3s">Live Weddings</a><span class="nav-group"><a href="Gallery.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Gallery<svg class="nav-caret" viewBox="0 0 10 6" width="8" height="5" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"></path></svg></a><span class="nav-menu"><a href="Gallery.dc.html#live-weddings">Live Weddings</a><a href="Gallery.dc.html#portraits">Portraits</a><a href="Gallery.dc.html#pets">Pet Portraits</a><a href="Gallery.dc.html#spiritual">Spiritual Art</a><a href="Gallery.dc.html#custom">Custom Work</a><a href="Gallery.dc.html#behind">Behind the Scenes</a></span></span><a href="About.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">About</a><a href="Kind Words.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Kind Words</a><a href="Blog.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Journal</a>
     </nav>
-    <a href="Enquire.dc.html" style="flex-shrink:0; font-size:11px; letter-spacing:.2em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:14px 26px; border-radius:100px; box-shadow:0 10px 30px -12px rgba(224,178,92,.8)">Enquire</a>
+    <a href="Enquire.dc.html" style="flex-shrink:0; font-size:13px; letter-spacing:.2em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:14px 26px; border-radius:100px; box-shadow:0 10px 30px -12px rgba(224,178,92,.8)">Enquire</a>
     <label for="nav-toggle" id="nav-scrim" aria-hidden="true"></label>
   </header>
 
@@ -90,11 +90,11 @@
     <div style="position:relative; width:100%; max-width:1440px; margin:0 auto; padding:clamp(120px,14vw,180px) clamp(20px,4vw,60px) clamp(56px,7vw,96px)">
       <h1 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(46px,7.6vw,124px); line-height:.95; letter-spacing:-.025em; margin:0 0 30px; max-width:20ch">Your Live Wedding Painting</h1>
       <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(22px,2.8vw,34px); font-weight:300; line-height:1.4; margin:0 0 20px; max-width:30ch">A live wedding painting is more than a painting. It becomes part of your celebration.</p>
-      <p style="font-size:15px; line-height:1.9; margin:0 0 18px; color:rgba(243,237,228,.72); max-width:52ch">I paint your wedding as it happens, while your guests watch the artwork come to life.</p>
-      <p style="font-size:15px; line-height:1.9; margin:0 0 36px; color:rgba(243,237,228,.66); max-width:52ch">By the end of the event, you have an original painting that brings back the people, colours, emotions, and memories of your day.</p>
+      <p style="font-size:16px; line-height:1.9; margin:0 0 18px; color:rgba(243,237,228,.72); max-width:52ch">I paint your wedding as it happens, while your guests watch the artwork come to life.</p>
+      <p style="font-size:16px; line-height:1.9; margin:0 0 36px; color:rgba(243,237,228,.66); max-width:52ch">By the end of the event, you have an original painting that brings back the people, colours, emotions, and memories of your day.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px">
-        <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Check Your Date</a>
-        <a href="Gallery.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.34); color:#F3EDE4; padding:19px 34px; border-radius:100px">See the Paintings</a>
+        <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Check Your Date</a>
+        <a href="Gallery.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.34); color:#F3EDE4; padding:19px 34px; border-radius:100px">See the Paintings</a>
       </div>
     </div>
   </section>
@@ -102,16 +102,16 @@
   <section style="padding:clamp(30px,4vw,50px) clamp(20px,4vw,60px)">
     <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(20px,3vw,36px); border-top:1px solid rgba(243,237,228,.12); border-bottom:1px solid rgba(243,237,228,.12); padding:clamp(26px,3.4vw,38px) 0">
       <div>
-        <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:8px">Original Artwork</div>
-        <p style="font-size:14px; line-height:1.7; margin:0; color:rgba(243,237,228,.66)">Real brushwork on canvas, painted at your venue, not a print.</p>
+        <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:8px">Original Artwork</div>
+        <p style="font-size:15px; line-height:1.7; margin:0; color:rgba(243,237,228,.66)">Real brushwork on canvas, painted at your venue, not a print.</p>
       </div>
       <div>
-        <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:8px">Planner Coordinated</div>
-        <p style="font-size:14px; line-height:1.7; margin:0; color:rgba(243,237,228,.66)">I work with your planner and photographer beforehand so timing, setup, and sightlines stay smooth on the day.</p>
+        <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:8px">Planner Coordinated</div>
+        <p style="font-size:15px; line-height:1.7; margin:0; color:rgba(243,237,228,.66)">I work with your planner and photographer beforehand so timing, setup, and sightlines stay smooth on the day.</p>
       </div>
       <div>
-        <div style="font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:8px">India &amp; Destination</div>
-        <p style="font-size:14px; line-height:1.7; margin:0; color:rgba(243,237,228,.66)">Based in India, travelling for selected weddings and destination celebrations.</p>
+        <div style="font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#E0B25C; margin-bottom:8px">India &amp; Destination</div>
+        <p style="font-size:15px; line-height:1.7; margin:0; color:rgba(243,237,228,.66)">Based in India, travelling for selected weddings and destination celebrations.</p>
       </div>
     </div>
   </section>
@@ -120,11 +120,11 @@
     <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:center">
       <div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; letter-spacing:-.02em; margin:0 0 28px">What Is Live Wedding Painting?</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">Live wedding painting means creating an original painting at your wedding while the celebration is happening.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">I paint in acrylic at the venue and usually spend around six to eight hours creating the artwork.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">The moment can be your varmala, pheras, vows, first dance, mandap, or another part of the wedding that feels special to you.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">Your guests can watch the painting take shape throughout the event.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:52ch">By the end of the celebration, the painting is complete and ready for the final reveal.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">Live wedding painting means creating an original painting at your wedding while the celebration is happening.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">I paint live at the venue and usually spend around six to eight hours creating the artwork.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">The moment can be your varmala, pheras, vows, first dance, mandap, or another part of the wedding that feels special to you.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">Your guests can watch the painting take shape throughout the event.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:52ch">By the end of the celebration, the painting is complete and ready for the final reveal.</p>
       </div>
       <div data-2col style="display:grid; grid-template-columns:1fr 1fr; gap:14px">
         <img src="assets/easel-in-venue.jpg" alt="Canvas on the easel at the venue" style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:6px">
@@ -138,11 +138,11 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:center">
       <div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.2vw,60px); line-height:1.04; letter-spacing:-.02em; margin:0 0 26px">What Happens on Your Wedding Day?</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">I usually arrive at the venue two to three hours before the main celebration begins.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">I set up my painting space and start by painting the background, including the venue, flowers, décor, and other details.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">Once the couple arrives, I take reference photographs of different moments during the wedding. I then choose the moments that work best for the painting.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">If you would like to choose, I can show you a few options and you can pick your favourite.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.66); max-width:50ch">Once the moment is selected, I paint the couple and complete the artwork during the event.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">I usually arrive at the venue two to three hours before the main celebration begins.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">I set up my painting space and start by painting the background, including the venue, flowers, décor, and other details.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">Once the couple arrives, I take reference photographs of different moments during the wedding. I then choose the moments that work best for the painting.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">If you would like to choose, I can show you a few options and you can pick your favourite.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0; color:rgba(243,237,228,.66); max-width:50ch">Once the moment is selected, I paint the couple and complete the artwork during the event.</p>
       </div>
       <div data-2col style="display:grid; grid-template-columns:1fr 1fr; gap:14px">
         <img src="assets/artist-painting-venue-pink.jpg" alt="Painting in progress as the venue fills up" style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:6px">
@@ -152,12 +152,12 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(36px,5vw,80px); align-items:center">
       <div style="order:2">
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.2vw,60px); line-height:1.04; letter-spacing:-.02em; margin:0 0 26px">Why Choose a Live Wedding Painting?</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">You already have photographs and videos, so why add a painting? Because a painting feels different. It is created right there, in the middle of your celebration.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">Guests can stop by, watch it grow, and come back later to see how much has changed.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">It can also become a beautiful surprise. Sometimes the groom books it for the bride. Sometimes the bride surprises the groom. It can also be a gift from parents, siblings, or friends.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">You already have photographs and videos, so why add a painting? Because a painting feels different. It is created right there, in the middle of your celebration.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">Guests can stop by, watch it grow, and come back later to see how much has changed.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">It can also become a beautiful surprise. Sometimes the groom books it for the bride. Sometimes the bride surprises the groom. It can also be a gift from parents, siblings, or friends.</p>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.3vw,26px); line-height:1.5; margin:0 0 18px; max-width:34ch">One of my favourite parts is seeing the reaction when the finished painting is revealed.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">A painting can also include someone important who could not be there. If a loved one has passed away, we can discuss adding them carefully using a photograph.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.66); max-width:50ch">The final artwork becomes more than a picture of the wedding. It becomes something personal that you can keep in your home for years.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.66); max-width:50ch">A painting can also include someone important who could not be there. If a loved one has passed away, we can discuss adding them carefully using a photograph.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0; color:rgba(243,237,228,.66); max-width:50ch">The final artwork becomes more than a picture of the wedding. It becomes something personal that you can keep in your home for years.</p>
       </div>
       <div data-2col style="order:1; display:grid; grid-template-columns:1fr 1fr; gap:14px">
         <img src="assets/live-finished-real.jpg" alt="The finished painting beside the couple it was painted for" style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:6px; margin-top:clamp(20px,4vw,52px)">
@@ -171,67 +171,67 @@
     <div style="max-width:1440px; margin:0 auto">
       <div class="sec-lead" style="margin-bottom:clamp(44px,5.5vw,76px)">
         <div><h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 24px">Which Wedding Moment Should You Choose?</h2></div>
-        <div><p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.7)">There is no single perfect moment. Every wedding is different.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.62)">If you are unsure, I can help you choose the moment that will work best on canvas.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62)">During the event, I take several reference photographs and look for moments that feel natural, happy, and full of emotion. Here are some popular choices.</p></div>
+        <div><p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.7)">There is no single perfect moment. Every wedding is different.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.62)">If you are unsure, I can help you choose the moment that will work best on canvas.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0; color:rgba(243,237,228,.62)">During the event, I take several reference photographs and look for moments that feel natural, happy, and full of emotion. Here are some popular choices.</p></div>
       </div>
       <div class="g4" style="gap:clamp(26px,3.2vw,44px)">
         <div>
           <img src="assets/painting-closeup-sikh-couple.jpg" alt="Varmala painting, garland exchange close-up" style="width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 30%; border-radius:8px; margin-bottom:20px">
           <div style="border-top:1px solid rgba(243,237,228,.18); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:28px; margin:0 0 12px">Varmala</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">This is one of my most requested moments. The exchange of garlands, laughter, movement, and reactions from family and friends create a painting full of energy.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">This is one of my most requested moments. The exchange of garlands, laughter, movement, and reactions from family and friends create a painting full of energy.</p>
           </div>
         </div>
         <div>
           <img src="assets/painting-night-mandap-jaipur.jpg" alt="Painting of the sacred fire and rituals at night" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px; margin-bottom:20px">
           <div style="border-top:1px solid rgba(243,237,228,.18); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:28px; margin:0 0 12px">Pheras</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">The sacred fire, warm light, rituals, and family gathered around the couple make this a beautiful and emotional moment to paint.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">The sacred fire, warm light, rituals, and family gathered around the couple make this a beautiful and emotional moment to paint.</p>
           </div>
         </div>
         <div>
           <img src="assets/painting-closeup-mandap-raipur.jpg" alt="Painting of the couple beneath the mandap" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px; margin-bottom:20px">
           <div style="border-top:1px solid rgba(243,237,228,.18); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:28px; margin:0 0 12px">The Mandap</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Sometimes the setting itself becomes an important part of the painting. If you have spent months planning the flowers, colours, and décor, the mandap can create a beautiful background for the couple.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Sometimes the setting itself becomes an important part of the painting. If you have spent months planning the flowers, colours, and décor, the mandap can create a beautiful background for the couple.</p>
           </div>
         </div>
         <div>
           <img src="assets/reveal-kerala-artist.jpg" alt="Calm, elegant wedding painting reveal" style="width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 25%; border-radius:8px; margin-bottom:20px">
           <div style="border-top:1px solid rgba(243,237,228,.18); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:28px; margin:0 0 12px">Wedding Vows</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Vows can create a calm and elegant painting. The couple, altar, aisle, and quiet emotion of the ceremony all work beautifully together.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Vows can create a calm and elegant painting. The couple, altar, aisle, and quiet emotion of the ceremony all work beautifully together.</p>
           </div>
         </div>
         <div>
           <img src="assets/reveal-mumbai-reception.jpg" alt="Reception painting reveal" style="width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 25%; border-radius:8px; margin-bottom:20px">
           <div style="border-top:1px solid rgba(243,237,228,.18); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:28px; margin:0 0 12px">Reception Entry</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Music, lights, confetti, and the excitement of the entrance can make this a fun and lively painting.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Music, lights, confetti, and the excitement of the entrance can make this a fun and lively painting.</p>
           </div>
         </div>
         <div>
           <img src="assets/reveal-kerala-wreath.jpg" alt="Golden hour wedding painting" style="width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 25%; border-radius:8px; margin-bottom:20px">
           <div style="border-top:1px solid rgba(243,237,228,.18); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:28px; margin:0 0 12px">Sunset Portrait</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Golden hour is one of my favourite times to paint. It works especially well for outdoor, beach, palace, and destination weddings.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Golden hour is one of my favourite times to paint. It works especially well for outdoor, beach, palace, and destination weddings.</p>
           </div>
         </div>
         <div>
           <img src="assets/reveal-punjabi-sword.jpg" alt="Family and couple with their finished painting" style="width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 20%; border-radius:8px; margin-bottom:20px">
           <div style="border-top:1px solid rgba(243,237,228,.18); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:28px; margin:0 0 12px">Family Moments</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Sometimes the most meaningful moment is not part of the ceremony. It may be your parents watching, your grandparents smiling, or your whole family together.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Sometimes the most meaningful moment is not part of the ceremony. It may be your parents watching, your grandparents smiling, or your whole family together.</p>
           </div>
         </div>
         <div>
           <div style="width:100%; aspect-ratio:4/3; border-radius:8px; margin-bottom:20px; background:repeating-linear-gradient(135deg, rgba(224,178,92,.14) 0 10px, rgba(224,178,92,.05) 10px 20px); display:flex; align-items:center; justify-content:center; text-align:center; padding:20px">
-            <span style="font-family:monospace; font-size:11px; letter-spacing:.08em; color:rgba(243,237,228,.55); text-transform:uppercase">Pet portrait<br>Image to supply</span>
+            <span style="font-family:monospace; font-size:13px; letter-spacing:.08em; color:rgba(243,237,228,.55); text-transform:uppercase">Pet portrait<br>Image to supply</span>
           </div>
           <div style="border-top:1px solid rgba(243,237,228,.18); padding-top:22px">
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:28px; margin:0 0 12px">Your Pets</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Pets are family too. If your pet is at the wedding, they can be included naturally. If they cannot attend, I can use a photograph to add them to the painting.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Pets are family too. If your pet is at the wedding, they can be included naturally. If they cannot attend, I can use a photograph to add them to the painting.</p>
           </div>
         </div>
       </div>
@@ -245,42 +245,42 @@
         <div style="border-top:1px solid rgba(243,237,228,.16); padding:26px 0">
           <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#E0B25C; margin-bottom:12px">01</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 10px">Tell Me About Your Wedding</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Share your wedding date, city, and venue. I will check my availability and get back to you.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Share your wedding date, city, and venue. I will check my availability and get back to you.</p>
         </div>
         <div style="border-top:1px solid rgba(243,237,228,.16); padding:26px 0">
           <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#E0B25C; margin-bottom:12px">02</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 10px">We Plan Your Painting</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">We will talk about your venue, décor, timeline, and the moments you would like to remember.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">We will talk about your venue, décor, timeline, and the moments you would like to remember.</p>
         </div>
         <div style="border-top:1px solid rgba(243,237,228,.16); padding:26px 0">
           <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#E0B25C; margin-bottom:12px">03</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 10px">Choose the Moment and Canvas Size</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">We will decide the moment to paint, whether that is your varmala, pheras, vows or another, and choose the right canvas size. Family members and pets can be included.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">We will decide the moment to paint, whether that is your varmala, pheras, vows or another, and choose the right canvas size. Family members and pets can be included.</p>
         </div>
         <div style="border-top:1px solid rgba(243,237,228,.16); padding:26px 0">
           <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#E0B25C; margin-bottom:12px">04</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 10px">Confirm Your Date</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Once everything is decided, I will share the booking details. Your date will be confirmed after the booking amount is received.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Once everything is decided, I will share the booking details. Your date will be confirmed after the booking amount is received.</p>
         </div>
         <div style="border-top:1px solid rgba(243,237,228,.16); padding:26px 0">
           <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#E0B25C; margin-bottom:12px">05</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 10px">Final Planning</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Before the wedding, I can coordinate with your planner or photographer if needed. This helps me understand the timeline and choose the best place to paint.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Before the wedding, I can coordinate with your planner or photographer if needed. This helps me understand the timeline and choose the best place to paint.</p>
         </div>
         <div style="border-top:1px solid rgba(243,237,228,.16); padding:26px 0">
           <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#E0B25C; margin-bottom:12px">06</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 10px">I Arrive and Set Up</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">On the wedding day, I arrive before the main moment and set up my painting space. I start by painting the venue, décor, flowers, and background.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">On the wedding day, I arrive before the main moment and set up my painting space. I start by painting the venue, décor, flowers, and background.</p>
         </div>
         <div style="border-top:1px solid rgba(243,237,228,.16); padding:26px 0">
           <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#E0B25C; margin-bottom:12px">07</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 10px">I Paint During the Celebration</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">As the wedding unfolds, I take reference photographs and continue painting. Guests can watch the artwork come to life throughout the event.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">As the wedding unfolds, I take reference photographs and continue painting. Guests can watch the artwork come to life throughout the event.</p>
         </div>
         <div style="border-top:1px solid rgba(243,237,228,.16); padding:26px 0">
           <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#E0B25C; margin-bottom:12px">08</div>
           <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:25px; margin:0 0 10px">The Final Reveal</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">By the end of the celebration, the painting is complete. Then comes my favourite part. The final painting is revealed to the couple and family.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">By the end of the celebration, the painting is complete. Then comes my favourite part. The final painting is revealed to the couple and family.</p>
         </div>
       </div>
     </div>
@@ -290,20 +290,20 @@
     <div style="max-width:1440px; margin:0 auto">
       <div style="display:flex; flex-wrap:wrap; gap:18px 40px; align-items:end; justify-content:space-between; margin-bottom:clamp(38px,4.6vw,64px)">
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0">Choose Your Canvas Size</h2>
-        <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62); max-width:32ch">I offer three main canvas sizes as a starting point. The final size is agreed once we have talked through your venue and the moment you want painted.</p>
+        <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.62); max-width:32ch">I offer three main canvas sizes as a starting point. The final size is agreed once we have talked through your venue and the moment you want painted.</p>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(24px,3vw,40px)">
         <div style="border:1px solid rgba(243,237,228,.16); border-radius:8px; padding:clamp(28px,3.4vw,42px); display:flex; flex-direction:column; gap:14px">
           <div style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4vw,52px); line-height:1">18 × 24<span style="font-size:.42em; letter-spacing:.16em; text-transform:uppercase; color:rgba(243,237,228,.55); margin-left:10px">inches</span></div>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.66)">A smaller size that keeps the focus mainly on the couple. The background is simpler so the bride and groom remain the main focus.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.66)">A smaller size that keeps the focus mainly on the couple. The background is simpler so the bride and groom remain the main focus.</p>
         </div>
         <div style="border:1px solid rgba(243,237,228,.16); border-radius:8px; padding:clamp(28px,3.4vw,42px); display:flex; flex-direction:column; gap:14px">
           <div style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4vw,52px); line-height:1">24 × 30<span style="font-size:.42em; letter-spacing:.16em; text-transform:uppercase; color:rgba(243,237,228,.55); margin-left:10px">inches</span></div>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.66)">A good option if you want the couple along with more of the mandap, stage, flowers, or décor.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.66)">A good option if you want the couple along with more of the mandap, stage, flowers, or décor.</p>
         </div>
         <div style="border:1px solid rgba(243,237,228,.16); border-radius:8px; padding:clamp(28px,3.4vw,42px); display:flex; flex-direction:column; gap:14px">
           <div style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4vw,52px); line-height:1">24 × 36<span style="font-size:.42em; letter-spacing:.16em; text-transform:uppercase; color:rgba(243,237,228,.55); margin-left:10px">inches</span></div>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.66)">A larger canvas for couples who want more of the venue and surroundings included. This size allows space for architecture, greenery, décor, and more background detail.</p>
+          <p style="font-size:16px; line-height:1.85; margin:0; color:rgba(243,237,228,.66)">A larger canvas for couples who want more of the venue and surroundings included. This size allows space for architecture, greenery, décor, and more background detail.</p>
         </div>
       </div>
     </div>
@@ -315,11 +315,11 @@
     <div style="position:relative; max-width:1440px; margin:0 auto">
       <div style="max-width:620px">
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Destination Wedding Painting</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.76)">I travel for selected weddings across India and can also discuss international destination weddings.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 22px; color:rgba(243,237,228,.68)">I have painted and can travel for weddings in cities such as Delhi, Mumbai, Bangalore, Jaipur, Hyderabad, Pune, Chennai, Kolkata, Indore, Goa, Kerala, Chandigarh, and Udaipur.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.68)">From palace weddings in Rajasthan to beach celebrations in Goa and Kerala, every venue brings something different to the painting.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.76)">I travel for selected weddings across India and can also discuss international destination weddings.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 22px; color:rgba(243,237,228,.68)">I have painted and can travel for weddings in cities such as Delhi, Mumbai, Bangalore, Jaipur, Hyderabad, Pune, Chennai, Kolkata, Indore, Goa, Kerala, Chandigarh, and Udaipur.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0 0 14px; color:rgba(243,237,228,.68)">From palace weddings in Rajasthan to beach celebrations in Goa and Kerala, every venue brings something different to the painting.</p>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.3vw,26px); line-height:1.5; margin:0 0 32px">If your wedding is somewhere else, just ask.</p>
-        <a href="Enquire.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Check Your Date</a>
+        <a href="Enquire.dc.html" style="display:inline-block; font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Check Your Date</a>
       </div>
     </div>
   </section>
@@ -328,20 +328,19 @@
     <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(40px,5vw,90px)">
       <div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.2vw,60px); line-height:1.04; margin:0 0 26px">What Is Included?</h2>
-        <p style="font-size:15px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Your live wedding painting includes:</p>
+        <p style="font-size:16px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">Your live wedding painting includes:</p>
         <div style="display:flex; flex-direction:column; gap:0">
           <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">Consultation and planning before the wedding</div>
           <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">Canvas and all painting materials</div>
           <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">Around six to eight hours of live painting at the venue</div>
           <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">Coordination with your planner or photographer when needed</div>
-          <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">Your original finished acrylic painting</div>
+          <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">Your original finished painting</div>
           <div style="border-top:1px solid rgba(243,237,228,.14); border-bottom:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">A process reel for social media</div>
         </div>
-        <p style="font-size:14px; line-height:1.8; margin:22px 0 0; color:rgba(224,178,92,.85)">[CLIENT: Please confirm whether travel and stay are included or charged separately.]</p>
+        <p style="font-size:15px; line-height:1.8; margin:22px 0 0; color:rgba(224,178,92,.85)">[CLIENT: Please confirm whether travel and stay are included or charged separately.]</p>
       </div>
       <div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.2vw,60px); line-height:1.04; margin:0 0 26px">What I Need From the Venue</h2>
-        <p style="font-size:15px; line-height:1.85; margin:0 0 22px; color:rgba(243,237,228,.62)">I only need a few simple things.</p>
         <div style="display:flex; flex-direction:column; gap:0">
           <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">A sturdy table and chair</div>
           <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">Good lighting</div>
@@ -349,7 +348,7 @@
           <div style="border-top:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">A fan or cooler if the weather is hot</div>
           <div style="border-top:1px solid rgba(243,237,228,.14); border-bottom:1px solid rgba(243,237,228,.14); padding:15px 0; font-size:16px; color:rgba(243,237,228,.85)">A heater if the weather is very cold</div>
         </div>
-        <p style="font-size:15px; line-height:1.9; margin:22px 0 0; color:rgba(243,237,228,.62); max-width:48ch">I can coordinate with your planner before the event so everything is ready when I arrive.</p>
+        <p style="font-size:16px; line-height:1.9; margin:22px 0 0; color:rgba(243,237,228,.62); max-width:48ch">I can coordinate with your planner before the event so everything is ready when I arrive.</p>
       </div>
     </div>
   </section>
@@ -358,7 +357,7 @@
     <div style="max-width:1440px; margin:0 auto">
       <div style="max-width:640px; margin-bottom:clamp(38px,4.6vw,60px)">
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 22px">Paintings From Real Weddings</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.66)">Every wedding has a different story, setting, and moment. Here are some of the weddings I have had the joy of painting.</p>
+        <p style="font-size:16px; line-height:1.9; margin:0; color:rgba(243,237,228,.66)">Every wedding has a different story, setting, and moment. Here are some of the weddings I have had the joy of painting.</p>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(16px,2vw,26px); margin-bottom:clamp(36px,4.4vw,56px)">
         <figure style="margin:0; position:relative; border-radius:8px; overflow:hidden; background:#1B1526">
@@ -371,8 +370,8 @@
           <img src="assets/painting-couple-closeup.jpg" alt="Couple painting close-up" style="width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
         </figure>
       </div>
-      <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:rgba(224,178,92,.8); margin-bottom:22px">[ Add Wedding Gallery Here ]</div>
-      <a href="Gallery.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">See the Full Gallery</a>
+      <div style="font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:rgba(224,178,92,.8); margin-bottom:22px">[ Add Wedding Gallery Here ]</div>
+      <a href="Gallery.dc.html" style="display:inline-block; font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">See the Full Gallery</a>
     </div>
   </section>
 
@@ -380,24 +379,24 @@
     <div class="faq-split" style="max-width:1440px; margin:0 auto; display:grid; gap:clamp(36px,4.5vw,80px); align-items:start">
       <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0; position:sticky; top:14vh">Common Questions</h2>
       <div>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">How far in advance should we book?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">It is best to enquire as soon as your wedding date is confirmed. Six to twelve months in advance is usually comfortable, especially during the busy wedding season from October to February. I take a limited number of weddings, so popular dates can fill early.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Our wedding is only a few weeks away. Is it too late?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Not always. If the date is available and travel can be arranged, I may still be able to paint your wedding. It is always worth asking.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">How long does a live wedding painting take?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">I usually paint for around six to eight hours at the venue. I arrive before the main moment so I can begin the background in advance.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Is the painting completed at the wedding?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. The painting is completed during the wedding and is ready for the final reveal before the event ends.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">How far in advance should we book?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">It is best to enquire as soon as your wedding date is confirmed. Six to twelve months in advance is usually comfortable, especially during the busy wedding season from October to February. I take a limited number of weddings, so popular dates can fill early.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Our wedding is only a few weeks away. Is it too late?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Not always. If the date is available and travel can be arranged, I may still be able to paint your wedding. It is always worth asking.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">How long does a live wedding painting take?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">I usually paint for around six to eight hours at the venue. I arrive before the main moment so I can begin the background in advance.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Is the painting completed at the wedding?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. The painting is completed during the wedding and is ready for the final reveal before the event ends.</p></details>
       <div id="faq-more" hidden>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">What happens if the wedding runs late?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">That is completely fine. Wedding timings often change. I plan around the actual celebration, not only the printed schedule.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Will you disturb the photographer or videographer?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">No. I choose my painting spot carefully and can coordinate with your planner and photography team beforehand.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do we need to do anything during the wedding?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">No. Enjoy your wedding. I will take care of the painting.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can guests watch you paint?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. That is one of the nicest parts of live wedding painting. Guests often stop by throughout the event to see how the painting is coming along.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">What paint do you use?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">I use high quality acrylic paint for live weddings. Acrylic works well for live painting because it allows me to work efficiently at the venue and create a finished artwork during the event.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can family members be added?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can discuss important family members before the wedding.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can pets be included?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. If your pet is attending the wedding, I can include them naturally. If not, I can use a clear photograph.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can you leave unwanted things out of the painting?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. The painting does not have to include every detail that appears in a photograph. Things like signs, chairs, equipment, or other distractions can be left out.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do we receive the original painting?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. You receive the original hand painted artwork.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do we get a process video?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. A process reel can be created so you can see the painting come to life.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can you paint our wedding if it has already happened?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. If your wedding has already taken place, I can create a wedding portrait using your photographs. This would be created as a studio painting rather than a live wedding painting.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do you travel for destination weddings?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. I travel for selected weddings across India and can also discuss international weddings. Travel and stay details are shared based on the location.</p></details>
-        <details style="border-top:1px solid rgba(243,237,228,.14); border-bottom:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do you work with wedding planners?</summary><p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. I am happy to coordinate with your wedding planner before the event so the setup and timing are smooth.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">What happens if the wedding runs late?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">That is completely fine. Wedding timings often change. I plan around the actual celebration, not only the printed schedule.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Will you disturb the photographer or videographer?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">No. I choose my painting spot carefully and can coordinate with your planner and photography team beforehand.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do we need to do anything during the wedding?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">No. Enjoy your wedding. I will take care of the painting.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can guests watch you paint?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. That is one of the nicest parts of live wedding painting. Guests often stop by throughout the event to see how the painting is coming along.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">What paint do you use?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">I use high quality paint suited to live painting, which lets me work efficiently at the venue and create a finished artwork during the event.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can family members be added?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can discuss important family members before the wedding.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can pets be included?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. If your pet is attending the wedding, I can include them naturally. If not, I can use a clear photograph.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can you leave unwanted things out of the painting?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. The painting does not have to include every detail that appears in a photograph. Things like signs, chairs, equipment, or other distractions can be left out.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do we receive the original painting?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. You receive the original hand painted artwork.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do we get a process video?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. A process reel can be created so you can see the painting come to life.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Can you paint our wedding if it has already happened?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. If your wedding has already taken place, I can create a wedding portrait using your photographs. This would be created as a studio painting rather than a live wedding painting.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do you travel for destination weddings?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. I travel for selected weddings across India and can also discuss international weddings. Travel and stay details are shared based on the location.</p></details>
+        <details style="border-top:1px solid rgba(243,237,228,.14); border-bottom:1px solid rgba(243,237,228,.14); padding:18px 0"><summary style="cursor:pointer; font-size:17px; color:rgba(243,237,228,.92); list-style:none">Do you work with wedding planners?</summary><p style="font-size:16px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. I am happy to coordinate with your wedding planner before the event so the setup and timing are smooth.</p></details>
       </div>
       <button type="button" class="faq-more-btn" data-faq-toggle aria-expanded="false" aria-controls="faq-more" style="margin-top:clamp(28px,3.4vw,42px)">View More Questions</button>
       </div>
@@ -410,8 +409,8 @@
       <p style="font-size:16px; line-height:1.9; margin:0 auto 12px; max-width:50ch; color:rgba(243,237,228,.7)">Planning your wedding and thinking about live painting?</p>
       <p style="font-size:16px; line-height:1.9; margin:0 auto 38px; max-width:50ch; color:rgba(243,237,228,.62)">Send me your date, city, and venue, and I will check my availability.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center">
-        <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Check Availability</a>
-        <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.3); color:#F3EDE4; padding:19px 34px; border-radius:100px">WhatsApp Shivani</a>
+        <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Check Availability</a>
+        <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.3); color:#F3EDE4; padding:19px 34px; border-radius:100px">WhatsApp Shivani</a>
       </div>
     </div>
   </section>
@@ -419,10 +418,10 @@
   <section data-video-reel="" data-reveal="" style="border-top:1px solid rgba(243,237,228,.1); padding:clamp(70px,9vw,120px) 0">
     <div style="max-width:1440px; margin:0 auto; padding:0 clamp(20px,4vw,60px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:18px 40px; margin-bottom:clamp(28px,3.4vw,44px)">
       <div>
-        <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:rgba(224,178,92,.9); margin-bottom:14px">Watch</div>
+        <div style="font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:rgba(224,178,92,.9); margin-bottom:14px">Watch</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.4vw,64px); line-height:1.04; letter-spacing:-.02em; margin:0">Brush, canvas, and the moment</h2>
       </div>
-      <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More on Instagram</a>
+      <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More on Instagram</a>
     </div>
     <div style="display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding:6px clamp(20px,4vw,60px) 20px; -webkit-overflow-scrolling:touch">
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
@@ -431,7 +430,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live wedding painting in progress</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live wedding painting in progress</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-portrait.jpg" alt="Portrait commission" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -439,7 +438,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Portrait commission</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Portrait commission</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-spiritual.jpg" alt="Spiritual painting" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -447,7 +446,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Spiritual painting</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Spiritual painting</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-custom-artwork.jpg" alt="Custom artwork" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -455,7 +454,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Custom artwork</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Custom artwork</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-live-wedding-2.jpg" alt="Live painting at a mandap" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -463,7 +462,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live painting at a mandap</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live painting at a mandap</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-custom.jpg" alt="A commission being finished" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -471,7 +470,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">A commission being finished</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">A commission being finished</span>
         </a>
     </div>
   </section>
@@ -480,11 +479,11 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(30px,4vw,56px); align-items:center; padding:clamp(32px,4vw,56px); border-radius:26px; background:linear-gradient(120deg,#241A33 0%,#1B1526 100%); border:1px solid rgba(243,237,228,.1)">
         <div>
           <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,3.4vw,48px); line-height:1.1; letter-spacing:-.02em; margin:0 0 14px">Have a moment you want painted?</h2>
-          <p style="font-size:15px; line-height:1.8; margin:0; color:rgba(243,237,228,.62); max-width:46ch">Tell me the date, the place, and the story. I take a limited number of commissions each month.</p>
+          <p style="font-size:16px; line-height:1.8; margin:0; color:rgba(243,237,228,.62); max-width:46ch">Tell me the date, the place, and the story. I take a limited number of commissions each month.</p>
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:14px; justify-self:start">
-          <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Start an Enquiry</a>
-          <a href="mailto:hello@shivanijaiswalart.com" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.28); color:#F3EDE4; padding:19px 34px; border-radius:100px">Email Shivani</a>
+          <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Start an Enquiry</a>
+          <a href="mailto:hello@shivanijaiswalart.com" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.28); color:#F3EDE4; padding:19px 34px; border-radius:100px">Email Shivani</a>
         </div>
       </div>
 
@@ -494,23 +493,23 @@
             <img src="assets/logo.png" alt="Shivani Jaiswal" style="width:44px; height:44px; border-radius:50%; object-fit:cover">
             <span style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300">Shivani Jaiswal</span>
           </a>
-          <p style="font-size:14px; line-height:1.8; margin:0; color:rgba(243,237,228,.55); max-width:34ch">Fine artist creating original commissioned artwork, and painting live at celebrations across India.</p>
+          <p style="font-size:15px; line-height:1.8; margin:0; color:rgba(243,237,228,.55); max-width:34ch">Fine artist creating original commissioned artwork, and painting live at celebrations across India.</p>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Explore</div>
-          <a href="Collections.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Collections</a><a href="Gallery.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Gallery</a><a href="Live Wedding Painting.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Live Weddings</a><a href="Blog.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Journal</a>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Explore</div>
+          <a href="Collections.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Collections</a><a href="Gallery.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Gallery</a><a href="Live Wedding Painting.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Live Weddings</a><a href="Blog.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Journal</a>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Studio</div>
-          <a href="About.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">About Shivani</a><a href="Kind Words.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Kind Words</a><a href="Enquire.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Enquire</a><a href="Privacy.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Privacy Policy</a>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Studio</div>
+          <a href="About.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">About Shivani</a><a href="Kind Words.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Kind Words</a><a href="Enquire.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Enquire</a><a href="Privacy.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Privacy Policy</a>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Follow</div>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Follow</div>
           <div style="display:flex; align-items:center; gap:6px; margin-left:-11px"><a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"></circle></svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-2.9h-2.9V8.7c0-.85.24-1.42 1.45-1.42h1.55V4.68A20 20 0 0 0 14.24 4.5c-2.24 0-3.77 1.37-3.77 3.88v2.22H8v2.9h2.47V21z" fill="currentColor"></path></svg></a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.28 17.38c-.08-.73-.15-1.85.03-2.65.17-.72 1.1-4.6 1.1-4.6s-.28-.56-.28-1.39c0-1.3.76-2.28 1.7-2.28.8 0 1.19.6 1.19 1.33 0 .8-.51 2-.78 3.12-.22.93.47 1.69 1.39 1.69 1.67 0 2.95-1.76 2.95-4.3 0-2.25-1.61-3.82-3.92-3.82-2.67 0-4.24 2-4.24 4.07 0 .8.31 1.67.7 2.14.08.1.09.18.07.28l-.26 1.06c-.04.17-.14.21-.31.13-1.17-.55-1.9-2.25-1.9-3.63 0-2.95 2.15-5.67 6.2-5.67 3.25 0 5.78 2.32 5.78 5.42 0 3.23-2.04 5.84-4.87 5.84-.95 0-1.84-.5-2.15-1.08l-.58 2.23c-.21.82-.78 1.84-1.17 2.46A9 9 0 1 0 12 3z" fill="currentColor"></path></svg></a></div>
         </div>
       </div>
 
-      <div style="border-top:1px solid rgba(243,237,228,.1); padding:26px 0; display:flex; flex-wrap:wrap; gap:12px 32px; justify-content:space-between; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.42)">
+      <div style="border-top:1px solid rgba(243,237,228,.1); padding:26px 0; display:flex; flex-wrap:wrap; gap:12px 32px; justify-content:space-between; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.42)">
         <div>&copy; 2026 Shivani Jaiswal. All rights reserved.</div>
         <div style="display:flex; flex-wrap:wrap; gap:12px 26px">
           <a href="Privacy.dc.html" style="color:rgba(243,237,228,.42)">Privacy Policy</a>

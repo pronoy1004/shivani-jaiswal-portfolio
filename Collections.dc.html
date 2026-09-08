@@ -36,14 +36,14 @@
     #nav-burger span:nth-child(1) { top:0; }
     #nav-burger span:nth-child(2) { top:8px; }
     #nav-burger span:nth-child(3) { top:16px; }
-    header nav { position:fixed; top:0; right:0; width:min(78vw,320px); height:100vh; flex-direction:column !important; flex-wrap:nowrap !important; justify-content:center !important; align-items:flex-start !important; gap:26px !important; padding:100px 44px !important; margin:0; background:#171123 !important; border:0 !important; border-radius:0 !important; backdrop-filter:none !important; box-shadow:-30px 0 60px -20px rgba(0,0,0,.5); transform:translateX(100%); transition:transform .45s cubic-bezier(.16,1,.3,1); z-index:60; font-size:14px !important; }
+    header nav { position:fixed; top:0; right:0; width:min(78vw,320px); height:100vh; flex-direction:column !important; flex-wrap:nowrap !important; justify-content:center !important; align-items:flex-start !important; gap:26px !important; padding:100px 44px !important; margin:0; background:#171123 !important; border:0 !important; border-radius:0 !important; backdrop-filter:none !important; box-shadow:-30px 0 60px -20px rgba(0,0,0,.5); transform:translateX(100%); transition:transform .45s cubic-bezier(.16,1,.3,1); z-index:60; font-size:15px !important; }
     header nav a { padding:0 !important; background:transparent !important; }
     header > a[href="Enquire.dc.html"] { display:none !important; }
     #nav-toggle:checked ~ nav { transform:translateX(0); }
     #nav-scrim { display:block; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(10,8,14,.55); opacity:0; pointer-events:none; transition:opacity .35s; z-index:59; }
     #nav-toggle:checked ~ #nav-scrim { opacity:1; pointer-events:auto; }
     .nav-menu { position:static; transform:none !important; opacity:1 !important; visibility:visible !important; min-width:0; padding:6px 0 0; border:0; background:transparent !important; backdrop-filter:none; box-shadow:none; }
-    .nav-menu a { padding:8px 0 !important; font-size:12px; letter-spacing:.14em; color:rgba(243,237,228,.55) !important; }
+    .nav-menu a { padding:8px 0 !important; font-size:14px; letter-spacing:.14em; color:rgba(243,237,228,.55) !important; }
     .nav-caret { display:none; }
     header nav .nav-group { width:100%; }
     #nav-toggle:checked ~ #nav-burger span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
@@ -52,12 +52,16 @@
   }
   a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #E0B25C; outline-offset:3px; border-radius:4px; }
   footer a[aria-label]:hover, footer a[aria-label]:focus-visible { color:#E0B25C !important; }
-  .cat-split { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:clamp(36px,5vw,80px); align-items:center; }
+  .cat-split { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:clamp(40px,5.5vw,92px); align-items:start; }
   @media (max-width:900px) { .cat-split { grid-template-columns:minmax(0,1fr); } }
-  .cat-media { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:6px; display:block; }
-  .cat-tile { width:100%; aspect-ratio:4/5; border:1px solid rgba(243,237,228,.16); background:#120E1A; display:grid; place-items:center; text-align:center; padding:26px; border-radius:6px; }
+  .cat-media { width:100%; aspect-ratio:5/6; position:sticky; top:clamp(90px,10vw,130px); object-fit:cover; border-radius:6px; display:block; }
+  .cat-tile { width:100%; aspect-ratio:5/6; position:sticky; top:clamp(90px,10vw,130px); border:1px solid rgba(243,237,228,.16); background:#120E1A; display:grid; place-items:center; text-align:center; padding:26px; border-radius:6px; }
   .cat-faq { max-width:900px; margin-top:clamp(46px,5.5vw,80px); padding-top:clamp(34px,4vw,52px); border-top:1px solid rgba(243,237,228,.1); }
-  .g4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(22px,2.6vw,34px); align-items:start; }
+  .g4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(26px,3vw,44px); align-items:start; margin-top:clamp(50px,6vw,86px); }
+  .cat-card { border-top:1px solid rgba(243,237,228,.16); padding-top:26px; }
+  .cat-card h3 { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(26px,2.1vw,32px); margin:0; }
+  .cat-card p { font-size:17px; line-height:1.9; margin:14px 0 0; color:rgba(243,237,228,.62); }
+  .cat-cta { display:inline-block; margin-top:clamp(44px,4.8vw,66px); font-size:14px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px; }
   @media (max-width:1080px) { .g4 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media (max-width:640px)  { .g4 { grid-template-columns:minmax(0,1fr); } }
 </style>
@@ -70,10 +74,10 @@
     </a>
     <input type="checkbox" id="nav-toggle" style="position:absolute; opacity:0; pointer-events:none">
     <label for="nav-toggle" id="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
-    <nav style="display:flex; align-items:center; gap:2px; padding:6px; border-radius:100px; border:1px solid rgba(243,237,228,.12); background:rgba(23,17,35,.62); backdrop-filter:blur(16px); font-size:11px; letter-spacing:.18em; text-transform:uppercase">
+    <nav style="display:flex; align-items:center; gap:2px; padding:6px; border-radius:100px; border:1px solid rgba(243,237,228,.12); background:rgba(23,17,35,.62); backdrop-filter:blur(16px); font-size:13px; letter-spacing:.18em; text-transform:uppercase">
       <span class="nav-group"><a href="Collections.dc.html" style="padding:9px 15px; border-radius:100px; color:#F3EDE4; background:rgba(243,237,228,.09); transition:color .3s,background .3s">Collections<svg class="nav-caret" viewBox="0 0 10 6" width="8" height="5" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"></path></svg></a><span class="nav-menu"><a href="Collections.dc.html#portraits">Portraits</a><a href="Collections.dc.html#pets">Pet Portraits</a><a href="Collections.dc.html#spiritual">Spiritual Art</a><a href="Collections.dc.html#abstract">Abstract Art</a><a href="Collections.dc.html#fabric">Fabric Painting</a><a href="Collections.dc.html#custom">Custom Artwork</a><a href="Collections.dc.html#events">Live Event Painting</a><a href="Collections.dc.html#hospitality">Hotels &amp; Hospitality</a><a href="Collections.dc.html#weddings">Live Wedding Painting</a></span></span><a href="Live Wedding Painting.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Live Weddings</a><span class="nav-group"><a href="Gallery.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Gallery<svg class="nav-caret" viewBox="0 0 10 6" width="8" height="5" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"></path></svg></a><span class="nav-menu"><a href="Gallery.dc.html#live-weddings">Live Weddings</a><a href="Gallery.dc.html#portraits">Portraits</a><a href="Gallery.dc.html#pets">Pet Portraits</a><a href="Gallery.dc.html#spiritual">Spiritual Art</a><a href="Gallery.dc.html#custom">Custom Work</a><a href="Gallery.dc.html#behind">Behind the Scenes</a></span></span><a href="About.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">About</a><a href="Kind Words.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Kind Words</a><a href="Blog.dc.html" style="padding:9px 15px; border-radius:100px; color:rgba(243,237,228,.68); background:transparent; transition:color .3s,background .3s">Journal</a>
     </nav>
-    <a href="Enquire.dc.html" style="flex-shrink:0; font-size:11px; letter-spacing:.2em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:14px 26px; border-radius:100px; box-shadow:0 10px 30px -12px rgba(224,178,92,.8)">Enquire</a>
+    <a href="Enquire.dc.html" style="flex-shrink:0; font-size:13px; letter-spacing:.2em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:14px 26px; border-radius:100px; box-shadow:0 10px 30px -12px rgba(224,178,92,.8)">Enquire</a>
     <label for="nav-toggle" id="nav-scrim" aria-hidden="true"></label>
   </header>
 
@@ -87,19 +91,19 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(28px,4vw,70px); align-items:end">
         <div>
           <p style="font-size:20px; font-weight:300; line-height:1.6; margin:0 0 18px; color:rgba(243,237,228,.86); max-width:46ch">I create original paintings inspired by people, memories, celebrations, and places that mean something to you.</p>
-          <p style="font-size:15px; line-height:1.9; margin:0 0 28px; color:rgba(243,237,228,.62); max-width:52ch">Every piece is painted by hand, with the person, story, and space it is being created for in mind.</p>
-          <a href="Gallery.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:18px 32px; border-radius:100px">Explore My Work</a>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 28px; color:rgba(243,237,228,.62); max-width:50ch">Every piece is painted by hand, with the person, story, and space it is being created for in mind.</p>
+          <a href="Gallery.dc.html" style="display:inline-block; font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:18px 32px; border-radius:100px">Explore My Work</a>
         </div>
         <nav style="display:flex; flex-direction:column; gap:2px; border-top:1px solid rgba(243,237,228,.14)">
-          <a href="#portraits" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Portraits</a>
-          <a href="#pets" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Pet Portraits</a>
-          <a href="#spiritual" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Religious and Spiritual Art</a>
-          <a href="#abstract" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Abstract Art</a>
-          <a href="#fabric" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Fabric Painting</a>
-          <a href="#custom" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Custom Artwork</a>
-          <a href="#events" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Live Painting for Events</a>
-          <a href="#hospitality" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Artwork for Hotels and Hospitality</a>
-          <a href="#weddings" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:15px">Live Wedding Painting</a>
+          <a href="#portraits" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Portraits</a>
+          <a href="#pets" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Pet Portraits</a>
+          <a href="#spiritual" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Religious and Spiritual Art</a>
+          <a href="#abstract" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Abstract Art</a>
+          <a href="#fabric" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Fabric Painting</a>
+          <a href="#custom" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Custom Artwork</a>
+          <a href="#events" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Live Painting for Events</a>
+          <a href="#hospitality" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Artwork for Hotels and Hospitality</a>
+          <a href="#weddings" style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(243,237,228,.1); color:rgba(243,237,228,.86); font-size:16px">Live Wedding Painting</a>
         </nav>
       </div>
     </div>
@@ -108,234 +112,247 @@
 
   <section id="portraits" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); border-top:1px solid rgba(243,237,228,.1)">
     <div style="max-width:1440px; margin:0 auto">
-      <div class="cat-split" style="margin-bottom:clamp(50px,6vw,86px)">
+      <div class="cat-split">
         <div>
-          <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Portraits</div>
-          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Your Story, Painted on Canvas</h2>
-          <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">I create hand-painted portraits of couples, families, parents, grandparents, and individuals.</p>
-          <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">Most portraits begin with a photograph. Before I start, we can discuss the size, background, colours, and any details you would like to include.</p>
-          <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:52ch">A portrait can celebrate a wedding, anniversary, family memory, or simply turn a favourite photograph into something you can keep for years.</p>
+          <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Portraits</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,82px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Your Story, Painted on Canvas</h2>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.7); max-width:50ch">I create hand-painted portraits of couples, families, parents, grandparents, and individuals.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.62); max-width:50ch">Most portraits begin with a photograph. Before I start, we can discuss the size, background, colours, and any details you would like to include.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0; color:rgba(243,237,228,.62); max-width:50ch">A portrait can celebrate a wedding, anniversary, family memory, or simply turn a favourite photograph into something you can keep for years.</p>
         </div>
         <img src="assets/charcoal-portrait-study.jpg" alt="Charcoal portrait study" class="cat-media">
       </div>
-
       <div class="g4">
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Couple Portraits</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A special photograph or memory turned into a personal painting for weddings, anniversaries, engagements, or gifts.</p>
-        </div>
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Family Portraits</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A hand-painted portrait of your family created from one photograph or a few different references.</p>
-        </div>
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Wedding Portraits</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Already married but wish you had a painting from your wedding? I can create one using your wedding photographs.</p>
-        </div>
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Memorial Portraits</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A thoughtful painting created from the photographs you have and handled with care.</p>
-        </div>
+        <div class="cat-card"><h3>Couple Portraits</h3><p>A special photograph or memory turned into a personal painting for weddings, anniversaries, engagements, or gifts.</p></div>
+        <div class="cat-card"><h3>Family Portraits</h3><p>A hand-painted portrait of your family created from one photograph or a few different references.</p></div>
+        <div class="cat-card"><h3>Wedding Portraits</h3><p>Already married but wish you had a painting from your wedding? I can create one using your wedding photographs.</p></div>
+        <div class="cat-card"><h3>Memorial Portraits</h3><p>A thoughtful painting created from the photographs you have and handled with care.</p></div>
       </div>
-
       <div class="cat-faq">
-        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(24px,2.8vw,34px); margin:0 0 10px">Common Questions</h3>
-          <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-            <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can you paint from an old photograph?</summary>
-            <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes, in many cases. Send me the photograph and I can let you know what can be created from it.</p>
-          </details>
-          <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-            <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can you combine people from different photographs?</summary>
-            <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can use different photographs to bring everyone together in one painting.</p>
-          </details>
-          <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-            <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can the background or clothing be changed?</summary>
-            <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can discuss these details before I start painting.</p>
-          </details>
-        <a href="Enquire.dc.html" style="display:inline-block; margin-top:28px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About a Portrait</a>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(26px,3vw,38px); margin:0 0 14px">Common Questions</h3>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">Can you paint from an old photograph?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes, in many cases. Send me the photograph and I can let you know what can be created from it.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">Can you combine people from different photographs?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can use different photographs to bring everyone together in one painting.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">Can the background or clothing be changed?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can discuss these details before I start painting.</p>
+        </details>
       </div>
+      <a href="Enquire.dc.html" class="cat-cta">Enquire About a Portrait</a>
     </div>
   </section>
 
   <section id="pets" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); background:#1B1526">
     <div style="max-width:1440px; margin:0 auto">
       <div class="cat-split">
-      <div>
-        <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Pet Portraits</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Your Pet, Painted With Love</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">Pets are such an important part of our lives, and a painting can be a beautiful way to celebrate them.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">I create hand painted pet portraits from your photographs and focus on the small details and expressions that make your pet special.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 34px; color:rgba(243,237,228,.62); max-width:52ch">It can be a portrait of a pet who is still with you, a much loved pet you have lost, or a thoughtful gift for someone special.</p>
-        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(24px,2.8vw,34px); margin:0 0 16px">Choosing Your Pet Photographs</h3>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 12px; color:rgba(243,237,228,.66); max-width:50ch">Photos taken in natural light and at your pet's eye level work best. Clear photographs of the face and eyes help me capture more of their personality.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.66); max-width:50ch">If you only have old or blurry photographs, send them anyway. I will let you know what can be created from them.</p>
-      </div>
-      <div class="cat-tile">
         <div>
-          <div style="font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">A pet portrait</div>
+          <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Pet Portraits</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,82px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Your Pet, Painted With Love</h2>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.7); max-width:50ch">Pets are such an important part of our lives, and a painting can be a beautiful way to celebrate them.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.62); max-width:50ch">I create hand painted pet portraits from your photographs and focus on the small details and expressions that make your pet special.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0; color:rgba(243,237,228,.62); max-width:50ch">It can be a portrait of a pet who is still with you, a much loved pet you have lost, or a thoughtful gift for someone special.</p>
+        </div>
+        <div class="cat-tile">
+          <div>
+            <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">A pet portrait</div>
+          </div>
         </div>
       </div>
+      <div class="g4">
+        <div class="cat-card"><h3>Natural Light</h3><p>Photographs taken in daylight show your pet&rsquo;s true colours and markings far more clearly.</p></div>
+        <div class="cat-card"><h3>Eye Level</h3><p>Photographs taken at your pet&rsquo;s eye level capture more of their character than shots taken from above.</p></div>
+        <div class="cat-card"><h3>Face and Eyes</h3><p>Clear photographs of the face and eyes help me capture more of their personality in the painting.</p></div>
+        <div class="cat-card"><h3>Older Photographs</h3><p>If you only have old or blurry photographs, send them anyway. I will let you know what can be created from them.</p></div>
       </div>
       <div class="cat-faq">
-        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(24px,2.8vw,34px); margin:0 0 10px">Common Questions</h3>
-        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-          <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can you paint more than one pet together?</summary>
-          <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. I can use separate photographs if needed.</p>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(26px,3vw,38px); margin:0 0 14px">Common Questions</h3>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">Can you paint more than one pet together?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. I can use separate photographs if needed.</p>
         </details>
-        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-          <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can I be included in the painting with my pet?</summary>
-          <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can create a portrait of you and your pet together.</p>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">Can I be included in the painting with my pet?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can create a portrait of you and your pet together.</p>
         </details>
-        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-          <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can you create a portrait of a pet that has passed away?</summary>
-          <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. These paintings are created with extra care using the photographs you have.</p>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">Can you create a portrait of a pet that has passed away?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. These paintings are created with extra care using the photographs you have.</p>
         </details>
-        <a href="Enquire.dc.html" style="display:inline-block; margin-top:28px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About a Pet Portrait</a>
       </div>
+      <a href="Enquire.dc.html" class="cat-cta">Enquire About a Pet Portrait</a>
     </div>
   </section>
 
   <section id="spiritual" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px)">
-    <div class="cat-split" style="max-width:1440px; margin:0 auto">
-      <div>
-        <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Religious and Spiritual Art</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Inspired by Faith and Tradition</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">I create spiritual and religious paintings inspired by faith, devotion, tradition, and sacred stories.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">These paintings can be created for your home, prayer room, living space, wedding gift, housewarming, or another special occasion.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.62); max-width:52ch">We can choose the size, colours, subject, and overall style based on where the painting will be placed.</p>
-        <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:rgba(243,237,228,.5); margin-bottom:16px">Subjects may include</div>
-        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:32px">
-          <span style="border:1px solid rgba(243,237,228,.2); border-radius:100px; padding:9px 18px; font-size:14px; color:rgba(243,237,228,.82)">Radha Krishna</span>
-          <span style="border:1px solid rgba(243,237,228,.2); border-radius:100px; padding:9px 18px; font-size:14px; color:rgba(243,237,228,.82)">Ganesha</span>
-          <span style="border:1px solid rgba(243,237,228,.2); border-radius:100px; padding:9px 18px; font-size:14px; color:rgba(243,237,228,.82)">Lakshmi</span>
-          <span style="border:1px solid rgba(243,237,228,.2); border-radius:100px; padding:9px 18px; font-size:14px; color:rgba(243,237,228,.82)">Shiva</span>
-          <span style="border:1px solid rgba(243,237,228,.2); border-radius:100px; padding:9px 18px; font-size:14px; color:rgba(243,237,228,.82)">Temple Art</span>
-          <span style="border:1px solid rgba(243,237,228,.2); border-radius:100px; padding:9px 18px; font-size:14px; color:rgba(243,237,228,.82)">Ghats</span>
-          <span style="border:1px solid rgba(243,237,228,.2); border-radius:100px; padding:9px 18px; font-size:14px; color:rgba(243,237,228,.82)">Scenes Inspired by Indian Spiritual Stories</span>
+    <div style="max-width:1440px; margin:0 auto">
+      <div class="cat-split">
+        <div>
+          <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Religious and Spiritual Art</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,82px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Art Inspired by Faith and Tradition</h2>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.7); max-width:50ch">I create spiritual and religious paintings inspired by faith, devotion, tradition, and sacred stories.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.62); max-width:50ch">These paintings can be created for your home, prayer room, living space, wedding gift, housewarming, or another special occasion.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0; color:rgba(243,237,228,.62); max-width:50ch">If you have a particular deity, temple, family tradition, or reference in mind, share it with me and we can create something around it.</p>
         </div>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 26px; color:rgba(243,237,228,.62); max-width:52ch">If you have a particular deity, temple, family tradition, or reference in mind, share it with me and we can create something around it.</p>
-        <a href="Enquire.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About Spiritual Art</a>
+        <img src="assets/shivani-spiritual-painting.jpg" alt="Spiritual painting in progress" class="cat-media">
       </div>
-      <img src="assets/shivani-spiritual-painting.jpg" alt="Spiritual painting in progress" class="cat-media">
+      <div class="g4">
+        <div class="cat-card"><h3>Deities</h3><p>Radha Krishna, Ganesha, Lakshmi, Shiva, and other forms you hold close.</p></div>
+        <div class="cat-card"><h3>Temple Art</h3><p>Shrines, carvings, and the detail of sacred architecture.</p></div>
+        <div class="cat-card"><h3>Ghats</h3><p>Riverside scenes, steps, lamps, and the quiet of early morning.</p></div>
+        <div class="cat-card"><h3>Family Tradition</h3><p>Scenes from Indian spiritual stories, or a tradition of your own.</p></div>
+      </div>
+      <a href="Enquire.dc.html" class="cat-cta">Enquire About Spiritual Art</a>
     </div>
   </section>
 
   <section id="abstract" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); background:#1B1526">
-    <div class="cat-split" style="max-width:1440px; margin:0 auto">
-      <div>
-        <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Abstract Art</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Inspired by Colour and Feeling</h2>
-        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(22px,2.6vw,30px); font-weight:300; line-height:1.45; margin:0 0 24px; max-width:34ch">Not every painting needs to tell a clear story.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">My abstract paintings are created using colour, texture, movement, and feeling.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">Some pieces begin with a mood or colour palette. Others are created especially for a particular room or space.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.62); max-width:52ch">If you are looking for original artwork for your home, office, or another space, we can discuss the size, colours, and feeling you would like the painting to have.</p>
-        <a href="Gallery.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Explore Abstract Art</a>
-      </div>
-      <div class="cat-tile">
+    <div style="max-width:1440px; margin:0 auto">
+      <div class="cat-split">
         <div>
-          <div style="font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">An abstract piece</div>
+          <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Abstract Art</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,82px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Art Inspired by Colour and Feeling</h2>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.7); max-width:50ch">Not every painting needs to tell a clear story. My abstract paintings are created using colour, texture, movement, and feeling.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.62); max-width:50ch">Some pieces begin with a mood or colour palette. Others are created especially for a particular room or space.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0; color:rgba(243,237,228,.62); max-width:50ch">If you are looking for original artwork for your home, office, or another space, we can discuss the size, colours, and feeling you would like the painting to have.</p>
+        </div>
+        <div class="cat-tile">
+          <div>
+            <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">An abstract piece</div>
+          </div>
         </div>
       </div>
+      <div class="g4">
+        <div class="cat-card"><h3>Colour Led</h3><p>Pieces that begin with a palette and build from there.</p></div>
+        <div class="cat-card"><h3>Texture and Movement</h3><p>Layered work where the surface itself carries the feeling.</p></div>
+        <div class="cat-card"><h3>Made for a Space</h3><p>Paintings sized and coloured for a particular room.</p></div>
+        <div class="cat-card"><h3>Original Pieces</h3><p>One-off works for homes, offices, and studios.</p></div>
+      </div>
+      <a href="Gallery.dc.html" class="cat-cta">Explore Abstract Art</a>
     </div>
   </section>
 
   <section id="fabric" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px)">
-    <div class="cat-split" style="max-width:1440px; margin:0 auto">
-      <div>
-        <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Fabric Painting</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Art Made for Fabric</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">I also create hand-painted artwork on denim, clothing, bags, and other fabric pieces.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">You can share a photograph, idea, colour palette, or reference you like, and I can create something around it.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.62); max-width:52ch">It could be something personal for you, a gift for someone special, or simply a way to make an everyday piece feel more unique.</p>
-        <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:rgba(243,237,228,.55); margin-bottom:10px">Fabric painting can include</div>
-        <ul style="list-style:none; margin:0 0 26px; padding:0">
-          <li style="font-size:15px; line-height:1.9; color:rgba(243,237,228,.7); padding:12px 0; border-bottom:1px solid rgba(243,237,228,.1)">Denim jackets</li>
-          <li style="font-size:15px; line-height:1.9; color:rgba(243,237,228,.7); padding:12px 0; border-bottom:1px solid rgba(243,237,228,.1)">Clothing</li>
-          <li style="font-size:15px; line-height:1.9; color:rgba(243,237,228,.7); padding:12px 0; border-bottom:1px solid rgba(243,237,228,.1)">Tote bags</li>
-          <li style="font-size:15px; line-height:1.9; color:rgba(243,237,228,.7); padding:12px 0; border-bottom:1px solid rgba(243,237,228,.1)">Fabric accessories</li>
-          <li style="font-size:15px; line-height:1.9; color:rgba(243,237,228,.7); padding:12px 0; border-bottom:1px solid rgba(243,237,228,.1)">Personalised gifts</li>
-        </ul>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 30px; color:rgba(243,237,228,.7)">Every piece is painted by hand and created specially for you.</p>
-        <a href="Enquire.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About Fabric Painting</a>
-      </div>
-      <div class="cat-tile">
+    <div style="max-width:1440px; margin:0 auto">
+      <div class="cat-split">
         <div>
-          <div style="font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">A hand-painted fabric piece</div>
+          <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Fabric Painting</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,82px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Art Made for Fabric</h2>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.7); max-width:50ch">I also create hand-painted artwork on denim, clothing, bags, and other fabric pieces.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.62); max-width:50ch">You can share a photograph, idea, colour palette, or reference you like, and I can create something around it.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0; color:rgba(243,237,228,.62); max-width:50ch">It could be something personal for you, a gift for someone special, or simply a way to make an everyday piece feel more unique. Every piece is painted by hand and created specially for you.</p>
+        </div>
+        <div class="cat-tile">
+          <div>
+            <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">A hand-painted fabric piece</div>
+          </div>
         </div>
       </div>
+      <div class="g4">
+        <div class="cat-card"><h3>Denim</h3><p>Jackets and other denim pieces painted by hand.</p></div>
+        <div class="cat-card"><h3>Clothing</h3><p>Everyday pieces turned into something of your own.</p></div>
+        <div class="cat-card"><h3>Bags</h3><p>Tote bags and fabric accessories you carry every day.</p></div>
+        <div class="cat-card"><h3>Personalised Gifts</h3><p>A painted piece made for someone special.</p></div>
+      </div>
+      <a href="Enquire.dc.html" class="cat-cta">Enquire About Fabric Painting</a>
     </div>
   </section>
 
-  <section id="custom" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px)">
+  <section id="custom" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); background:#1B1526">
     <div style="max-width:1440px; margin:0 auto">
-      <div class="cat-split" style="margin-bottom:clamp(46px,6vw,80px)">
+      <div class="cat-split">
         <div>
-        <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Custom Artwork</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.02; letter-spacing:-.02em; margin:0 0 26px">Have Something Else in Mind?</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:52ch">Sometimes an idea does not fit into one category.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:52ch">It could be a home you grew up in, a place you love, a favourite photograph, a memory, or something completely personal.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0; color:rgba(243,237,228,.62); max-width:52ch">Tell me what you would like painted and why it matters to you. We can create something around your story.</p>
+          <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Custom Artwork</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,82px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Have Something Else in Mind?</h2>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.7); max-width:50ch">Sometimes an idea does not fit into one category.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.62); max-width:50ch">It could be a home you grew up in, a place you love, a favourite photograph, a memory, or something completely personal.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0; color:rgba(243,237,228,.62); max-width:50ch">Tell me what you would like painted and why it matters to you. We can create something around your story.</p>
         </div>
         <img src="assets/shivani-with-painting.jpg" alt="Shivani with a finished custom commission" class="cat-media">
       </div>
-      <div class="g4" style="margin-bottom:clamp(50px,6vw,86px)">
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">A Home</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Your childhood home, family house, or another place filled with memories.</p>
-        </div>
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">A Place</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Where you got engaged, a favourite holiday destination, or a place that always stays with you.</p>
-        </div>
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">A Special Moment</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">A photograph or memory you would like to turn into a painting.</p>
-        </div>
-        <div style="border-top:1px solid rgba(243,237,228,.16); padding-top:22px">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:26px; margin:0 0 12px">Personal Gifts</h3>
-          <p style="font-size:15px; line-height:1.85; margin:0; color:rgba(243,237,228,.62)">Original paintings for birthdays, anniversaries, weddings, retirements, and other special occasions.</p>
-        </div>
+      <div class="g4">
+        <div class="cat-card"><h3>A Home</h3><p>Your childhood home, family house, or another place filled with memories.</p></div>
+        <div class="cat-card"><h3>A Place</h3><p>Where you got engaged, a favourite holiday destination, or a place that always stays with you.</p></div>
+        <div class="cat-card"><h3>A Special Moment</h3><p>A photograph or memory you would like to turn into a painting.</p></div>
+        <div class="cat-card"><h3>Personal Gifts</h3><p>Original paintings for birthdays, anniversaries, weddings, retirements, and other special occasions.</p></div>
       </div>
       <div class="cat-faq">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(24px,2.8vw,34px); margin:0 0 10px">Common Questions</h3>
-          <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-            <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">I only have one photograph. Is that enough?</summary>
-            <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Often, yes. Send it to me and I can let you know.</p>
-          </details>
-          <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-            <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Can I see the painting before it is finished?</summary>
-            <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can discuss the process before I begin.</p>
-          </details>
-          <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:16px 0">
-            <summary style="cursor:pointer; font-size:16px; color:rgba(243,237,228,.9); list-style:none">Do you ship outside India?</summary>
-            <p style="font-size:15px; line-height:1.85; margin:12px 0 0; color:rgba(224,178,92,.85)">[CLIENT: Please confirm international shipping details.]</p>
-          </details>
-          <a href="Enquire.dc.html" style="display:inline-block; margin-top:28px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Discuss a Custom Painting</a>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(26px,3vw,38px); margin:0 0 14px">Common Questions</h3>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">I only have one photograph. Is that enough?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">Often, yes. Send it to me and I can let you know.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">Can I see the painting before it is finished?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">Yes. We can discuss the process before I begin.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(243,237,228,.12); padding:20px 0">
+          <summary style="cursor:pointer; font-size:18px; color:rgba(243,237,228,.9); list-style:none">Do you ship outside India?</summary>
+          <p style="font-size:18px; line-height:1.9; margin:12px 0 0; color:rgba(243,237,228,.62)">[CLIENT: Please confirm international shipping details.]</p>
+        </details>
       </div>
+      <a href="Enquire.dc.html" class="cat-cta">Discuss a Custom Painting</a>
     </div>
   </section>
 
-  <section id="events" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); background:#1B1526">
-    <div style="max-width:1440px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(40px,5vw,90px)">
-      <div>
-        <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Live Painting for Events</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.2vw,62px); line-height:1.04; letter-spacing:-.02em; margin:0 0 26px">More Than Weddings</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:50ch">I also create live paintings at selected events such as concerts, performances, private celebrations, and corporate events, including galas, product launches, and leadership offsites.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:50ch">I paint while the event is happening, capturing the people, atmosphere, and special moments on canvas.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 28px; color:rgba(243,237,228,.62); max-width:50ch">Guests can watch the artwork come to life during the event, and the finished painting becomes a lasting memory of the day.</p>
-        <a href="Enquire.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Enquire About Live Event Painting</a>
+  <section id="events" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px)">
+    <div style="max-width:1440px; margin:0 auto">
+      <div class="cat-split">
+        <div>
+          <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Live Painting for Events</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,82px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">More Than Weddings</h2>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.7); max-width:50ch">I also create live paintings at selected events such as concerts, performances, private celebrations, and corporate events, including galas, product launches, and leadership offsites.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.62); max-width:50ch">I paint while the event is happening, capturing the people, atmosphere, and special moments on canvas.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0; color:rgba(243,237,228,.62); max-width:50ch">Guests can watch the artwork come to life during the event, and the finished painting becomes a lasting memory of the day.</p>
+        </div>
+        <div class="cat-tile">
+          <div>
+            <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">Live painting at an event</div>
+          </div>
+        </div>
       </div>
-      <div id="hospitality">
-        <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Artwork for Hotels and Hospitality Spaces</div>
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.2vw,62px); line-height:1.04; letter-spacing:-.02em; margin:0 0 26px">Original Art for Your Space</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.7); max-width:50ch">I create original artwork for hotels, resorts, restaurants, and other hospitality spaces.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.62); max-width:50ch">The paintings can be designed around the style, interiors, mood, and story of the property.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 28px; color:rgba(243,237,228,.62); max-width:50ch">From traditional Indian art to abstract and contemporary pieces, I work with you to create artwork that feels connected to the space and adds something special for your guests.</p>
-        <a href="Enquire.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:6px">Discuss Artwork for Your Space</a>
+      <div class="g4">
+        <div class="cat-card"><h3>Concerts</h3><p>Painting the performance as it happens, in front of the audience.</p></div>
+        <div class="cat-card"><h3>Private Celebrations</h3><p>Birthdays, anniversaries, and family occasions painted live.</p></div>
+        <div class="cat-card"><h3>Corporate Events</h3><p>Galas, product launches, and leadership offsites.</p></div>
+        <div class="cat-card"><h3>The Finished Piece</h3><p>You keep the painting created on the day.</p></div>
       </div>
+      <a href="Enquire.dc.html" class="cat-cta">Enquire About Live Event Painting</a>
+    </div>
+  </section>
+
+  <section id="hospitality" data-reveal="" style="padding:clamp(70px,9vw,130px) clamp(20px,4vw,60px); background:#1B1526">
+    <div style="max-width:1440px; margin:0 auto">
+      <div class="cat-split">
+        <div>
+          <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Artwork for Hotels and Hospitality Spaces</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,5.2vw,82px); line-height:1.04; letter-spacing:-.02em; margin:0 0 30px">Original Art for Your Space</h2>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.7); max-width:50ch">I create original artwork for hotels, resorts, restaurants, and other hospitality spaces.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.62); max-width:50ch">The paintings can be designed around the style, interiors, mood, and story of the property.</p>
+          <p style="font-size:18px; line-height:1.95; margin:0; color:rgba(243,237,228,.62); max-width:50ch">From traditional Indian art to abstract and contemporary pieces, I work with you to create artwork that feels connected to the space and adds something special for your guests.</p>
+        </div>
+        <div class="cat-tile">
+          <div>
+            <div style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#E0B25C; margin-bottom:12px">Image to supply</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:rgba(243,237,228,.5)">Artwork in a hospitality space</div>
+          </div>
+        </div>
+      </div>
+      <div class="g4">
+        <div class="cat-card"><h3>Hotels and Resorts</h3><p>Lobbies, suites, and shared spaces.</p></div>
+        <div class="cat-card"><h3>Restaurants</h3><p>Pieces built around the interiors and the menu&rsquo;s story.</p></div>
+        <div class="cat-card"><h3>Traditional Indian Art</h3><p>Work rooted in regional style and craft.</p></div>
+        <div class="cat-card"><h3>Abstract and Contemporary</h3><p>Colour-led pieces for modern interiors.</p></div>
+      </div>
+      <a href="Enquire.dc.html" class="cat-cta">Discuss Artwork for Your Space</a>
     </div>
   </section>
 
@@ -344,12 +361,12 @@
     <div style="position:absolute; inset:0; background:linear-gradient(100deg, rgba(18,14,26,.95) 0%, rgba(18,14,26,.74) 52%, rgba(18,14,26,.35) 100%)"></div>
     <div style="position:relative; max-width:1440px; margin:0 auto">
       <div style="max-width:600px">
-        <div style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:22px">Live Wedding Painting</div>
+        <div style="font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:#E0B25C; margin-bottom:26px">Live Wedding Painting</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1; letter-spacing:-.02em; margin:0 0 28px">Your Wedding, Painted Live</h2>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.78)">I paint your wedding as it happens, capturing the people, colours, and little details that make the day special.</p>
-        <p style="font-size:15px; line-height:1.9; margin:0 0 16px; color:rgba(243,237,228,.68)">I arrive before the main celebration, set up my painting space, and begin creating the scene on canvas. As the wedding unfolds, the painting comes to life.</p>
+        <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.78)">I paint your wedding as it happens, capturing the people, colours, and little details that make the day special.</p>
+        <p style="font-size:18px; line-height:1.95; margin:0 0 20px; color:rgba(243,237,228,.68)">I arrive before the main celebration, set up my painting space, and begin creating the scene on canvas. As the wedding unfolds, the painting comes to life.</p>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.4vw,28px); line-height:1.5; margin:0 0 32px">By the end of the celebration, your painting is complete and ready for the final reveal.</p>
-        <a href="Live Wedding Painting.dc.html" style="display:inline-block; font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:18px 32px; border-radius:100px">Explore Live Wedding Painting</a>
+        <a href="Live Wedding Painting.dc.html" style="display:inline-block; font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:18px 32px; border-radius:100px">Explore Live Wedding Painting</a>
       </div>
     </div>
   </section>
@@ -357,10 +374,10 @@
   <section style="border-top:1px solid rgba(243,237,228,.1); padding:clamp(80px,10vw,140px) clamp(20px,4vw,60px)">
     <div style="max-width:900px; margin:0 auto; text-align:center">
       <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.8vw,74px); line-height:1.04; margin:0 0 24px">Have Something in Mind?</h2>
-      <p style="font-size:16px; line-height:1.9; margin:0 auto 38px; max-width:54ch; color:rgba(243,237,228,.66)">You do not need to know exactly which category your idea fits into. Tell me what you would like painted, share any photographs or references you have, and we can take it from there.</p>
+      <p style="font-size:18px; line-height:1.95; margin:0 auto 38px; max-width:54ch; color:rgba(243,237,228,.66)">You do not need to know exactly which category your idea fits into. Tell me what you would like painted, share any photographs or references you have, and we can take it from there.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center">
-        <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Get in Touch</a>
-        <a href="Gallery.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.3); color:#F3EDE4; padding:19px 34px; border-radius:100px">View My Work</a>
+        <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Get in Touch</a>
+        <a href="Gallery.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.3); color:#F3EDE4; padding:19px 34px; border-radius:100px">View My Work</a>
       </div>
     </div>
   </section>
@@ -368,10 +385,10 @@
   <section data-video-reel="" data-reveal="" style="border-top:1px solid rgba(243,237,228,.1); padding:clamp(70px,9vw,120px) 0">
     <div style="max-width:1440px; margin:0 auto; padding:0 clamp(20px,4vw,60px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:18px 40px; margin-bottom:clamp(28px,3.4vw,44px)">
       <div>
-        <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:rgba(224,178,92,.9); margin-bottom:14px">Watch</div>
+        <div style="font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:rgba(224,178,92,.9); margin-bottom:14px">Watch</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(32px,4.4vw,64px); line-height:1.04; letter-spacing:-.02em; margin:0">Brush, canvas, and the moment</h2>
       </div>
-      <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More on Instagram</a>
+      <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border-bottom:1px solid rgba(224,178,92,.6); padding-bottom:5px">More on Instagram</a>
     </div>
     <div style="display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding:6px clamp(20px,4vw,60px) 20px; -webkit-overflow-scrolling:touch">
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
@@ -380,7 +397,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live wedding painting in progress</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live wedding painting in progress</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-portrait.jpg" alt="Portrait commission" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -388,7 +405,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Portrait commission</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Portrait commission</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-spiritual.jpg" alt="Spiritual painting" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -396,7 +413,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Spiritual painting</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Spiritual painting</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-custom-artwork.jpg" alt="Custom artwork" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -404,7 +421,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Custom artwork</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Custom artwork</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-live-wedding-2.jpg" alt="Live painting at a mandap" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -412,7 +429,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live painting at a mandap</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">Live painting at a mandap</span>
         </a>
         <a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" style="position:relative; flex:0 0 auto; width:min(240px,62vw); aspect-ratio:9/16; border-radius:20px; overflow:hidden; scroll-snap-align:center; background:#1B1526; display:block">
           <img src="assets/reel-custom.jpg" alt="A commission being finished" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
@@ -420,7 +437,7 @@
           <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; border-radius:50%; background:rgba(243,237,228,.9); display:flex; align-items:center; justify-content:center">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#120E1A"></path></svg>
           </span>
-          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">A commission being finished</span>
+          <span style="position:absolute; left:16px; right:16px; bottom:14px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.86)">A commission being finished</span>
         </a>
     </div>
   </section>
@@ -429,11 +446,11 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(30px,4vw,56px); align-items:center; padding:clamp(32px,4vw,56px); border-radius:26px; background:linear-gradient(120deg,#241A33 0%,#1B1526 100%); border:1px solid rgba(243,237,228,.1)">
         <div>
           <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(28px,3.4vw,48px); line-height:1.1; letter-spacing:-.02em; margin:0 0 14px">Have a moment you want painted?</h2>
-          <p style="font-size:15px; line-height:1.8; margin:0; color:rgba(243,237,228,.62); max-width:46ch">Tell me the date, the place, and the story. I take a limited number of commissions each month.</p>
+          <p style="font-size:16px; line-height:1.8; margin:0; color:rgba(243,237,228,.62); max-width:46ch">Tell me the date, the place, and the story. I take a limited number of commissions each month.</p>
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:14px; justify-self:start">
-          <a href="Enquire.dc.html" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Start an Enquiry</a>
-          <a href="mailto:hello@shivanijaiswalart.com" style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.28); color:#F3EDE4; padding:19px 34px; border-radius:100px">Email Shivani</a>
+          <a href="Enquire.dc.html" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; background:#E0B25C; color:#120E1A; padding:19px 34px; border-radius:100px">Start an Enquiry</a>
+          <a href="mailto:hello@shivanijaiswalart.com" style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(243,237,228,.28); color:#F3EDE4; padding:19px 34px; border-radius:100px">Email Shivani</a>
         </div>
       </div>
 
@@ -443,23 +460,23 @@
             <img src="assets/logo.png" alt="Shivani Jaiswal" style="width:44px; height:44px; border-radius:50%; object-fit:cover">
             <span style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300">Shivani Jaiswal</span>
           </a>
-          <p style="font-size:14px; line-height:1.8; margin:0; color:rgba(243,237,228,.55); max-width:34ch">Fine artist creating original commissioned artwork, and painting live at celebrations across India.</p>
+          <p style="font-size:15px; line-height:1.8; margin:0; color:rgba(243,237,228,.55); max-width:34ch">Fine artist creating original commissioned artwork, and painting live at celebrations across India.</p>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Explore</div>
-          <a href="Collections.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Collections</a><a href="Gallery.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Gallery</a><a href="Live Wedding Painting.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Live Weddings</a><a href="Blog.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Journal</a>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Explore</div>
+          <a href="Collections.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Collections</a><a href="Gallery.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Gallery</a><a href="Live Wedding Painting.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Live Weddings</a><a href="Blog.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Journal</a>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Studio</div>
-          <a href="About.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">About Shivani</a><a href="Kind Words.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Kind Words</a><a href="Enquire.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Enquire</a><a href="Privacy.dc.html" style="display:block; font-size:14px; color:rgba(243,237,228,.62); margin-bottom:12px">Privacy Policy</a>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Studio</div>
+          <a href="About.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">About Shivani</a><a href="Kind Words.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Kind Words</a><a href="Enquire.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Enquire</a><a href="Privacy.dc.html" style="display:block; font-size:15px; color:rgba(243,237,228,.62); margin-bottom:12px">Privacy Policy</a>
         </div>
         <div>
-          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Follow</div>
+          <div style="font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:#F3EDE4; margin-bottom:20px">Follow</div>
           <div style="display:flex; align-items:center; gap:6px; margin-left:-11px"><a href="https://www.instagram.com/shivanijaiswalart/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"></circle></svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-2.9h-2.9V8.7c0-.85.24-1.42 1.45-1.42h1.55V4.68A20 20 0 0 0 14.24 4.5c-2.24 0-3.77 1.37-3.77 3.88v2.22H8v2.9h2.47V21z" fill="currentColor"></path></svg></a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest" title="Pinterest" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:rgba(243,237,228,.62); transition:color .3s"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.28 17.38c-.08-.73-.15-1.85.03-2.65.17-.72 1.1-4.6 1.1-4.6s-.28-.56-.28-1.39c0-1.3.76-2.28 1.7-2.28.8 0 1.19.6 1.19 1.33 0 .8-.51 2-.78 3.12-.22.93.47 1.69 1.39 1.69 1.67 0 2.95-1.76 2.95-4.3 0-2.25-1.61-3.82-3.92-3.82-2.67 0-4.24 2-4.24 4.07 0 .8.31 1.67.7 2.14.08.1.09.18.07.28l-.26 1.06c-.04.17-.14.21-.31.13-1.17-.55-1.9-2.25-1.9-3.63 0-2.95 2.15-5.67 6.2-5.67 3.25 0 5.78 2.32 5.78 5.42 0 3.23-2.04 5.84-4.87 5.84-.95 0-1.84-.5-2.15-1.08l-.58 2.23c-.21.82-.78 1.84-1.17 2.46A9 9 0 1 0 12 3z" fill="currentColor"></path></svg></a></div>
         </div>
       </div>
 
-      <div style="border-top:1px solid rgba(243,237,228,.1); padding:26px 0; display:flex; flex-wrap:wrap; gap:12px 32px; justify-content:space-between; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.42)">
+      <div style="border-top:1px solid rgba(243,237,228,.1); padding:26px 0; display:flex; flex-wrap:wrap; gap:12px 32px; justify-content:space-between; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,237,228,.42)">
         <div>&copy; 2026 Shivani Jaiswal. All rights reserved.</div>
         <div style="display:flex; flex-wrap:wrap; gap:12px 26px">
           <a href="Privacy.dc.html" style="color:rgba(243,237,228,.42)">Privacy Policy</a>
